@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Projects - tmralmeida's blog</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="styles.css" rel="stylesheet">
+
+
+    <script src="scripts/toggle.js"> </script>
+</head>
+
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">tmralmeida's blog</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="projects.html">Projects</a>
+                    <a class="nav-link" href="aboutme.html">About Me</a>
+                    <a class="nav-link" href="contacts.html">Contacts</a>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <div class="card">
+              <h2 class="card-header">bag-of-models</h2>
+              <div class="card-body">
+                  <h5 class="card-title">Mar 2020 - now</h5>
+                  <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+                  <p class="card-text">This is a guide for Deep Learning practitioners. It covers Tensorflow and Pytorch
+                  techniques to train the best-known models for a wide-range of fields.</p>
+                <button id="read_more_bag" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-bag">
+                    Continue reading
+                </button>
+                <div class="modal fade" id="modal-bag" tabindex="-1" role="dialog" aria-labelledby="bag-modal-title" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="bag-modal-title">bag-of-models Project (Mar 2020 - )</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body-faster">
+                          <p class="describe-projects">
+                              This is a guide for Deep Learning practitioners. It covers Tensorflow and Pytorch
+                              techniques to train the best-known models for a wide-range of fields. (UNDER CONSTRUCTION)
+                          </p>
+                      </div>
+                      <div class="modal-footer">
+                        <button id="prev_bag" type="button" class="btn btn-primary" onclick="toggle_modals('#modal-bag', '#modal-faster')">Previous</button>
+                        <button type="button" class="btn btn-primary" disabled>Next</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="card">
+              <h2 class="card-header">faster-rcnn-data-matrix</h2>
+              <div class="card-body">
+                  <h5 class="card-title">Mar 2020</h5>
+                   <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Finished</div>
+                    </div>
+                  <p class="card-text">This work presents an implementation of a Faster R-CNN model to detect Data Matrix. This architecture
+                  demonstrated quite accurate and consistent results by...</p>
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-faster">
+                    Continue reading
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="modal-faster" tabindex="-1" role="dialog" aria-labelledby="faster-modal-title" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="faster-modal-title">faster-rcnn-data-matrix Project (Mar 2020)</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body-faster">
+                          <p class="describe-projects">
+                              This work presents an implementation of a Faster R-CNN model to detect Data Matrix. This architecture
+                              demonstrated quite accurate and consistent results by detecting almost all landmarks throughout the test
+                              set.
+                              This project arose during my research work at University of Aveiro, Portugal.
+                              (UNDER CONSTRUCTION)
+                          </p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" disabled>Previous</button>
+                        <button type="button" class="btn btn-primary" onclick="toggle_modals('#modal-faster,#modal-bag')">Next</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a
+                        href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
