@@ -156,13 +156,11 @@ div.break{
   font-size:.75em;
   font-style:italic;
   color: rgb(177, 175, 175);
-  text-align:"left";
 }
 
 .desc{
   margin:0em;
   color: rgb(36, 36, 36);
-  text-align:"left";
 }
 
 .paper_btn{
@@ -176,8 +174,8 @@ div.break{
 .paper{
   margin-top:1em;
   margin-left:0em;
+  text-align:"left";
 }
 .paper p{
   margin:0em;
-  text-align:"left";
 }
