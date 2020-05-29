@@ -96,6 +96,7 @@ body {
   margin-top: 2rem;
   padding: 0 1.5rem;
   color: #fb0;
+  border-bottom:solid 1px #fb0;
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
