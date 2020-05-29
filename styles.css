@@ -147,18 +147,12 @@ body {
 
 }
 
-.paper{
-  margin-top:1em;
-}
-
-.paper p{
-  float:left;
-  margin-top:1;
+div.break{
+  clear:both;
 }
 
 .byline{
   margin:0em;
-  float:left;
   font-size:.75em;
   font-style:italic;
   color: rgb(177, 175, 175);
@@ -166,7 +160,6 @@ body {
 
 .desc{
   margin:0em;
-  float:left;
   color: rgb(97, 97, 97);
 }
 
@@ -178,6 +171,10 @@ body {
   margin-left:1em;
 }
 
-div.break{
-  clear:both;
+.paper{
+  margin-top:1em;
+}
+.paper p{
+  float:left;
+  margin:0;
 }
