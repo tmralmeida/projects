@@ -163,7 +163,7 @@ div.break{
   color:#bff;
 }
 
-.paper{
+.paper_btn{
   float: right;
   border:2px solid #0cc;
   padding:.2em;
@@ -173,4 +173,11 @@ div.break{
   background-color:black;
   */
   margin-left:1em;
+}
+
+.paper{
+  margin-top:1em;
+}
+.paper h4{
+  margin:0;
 }
