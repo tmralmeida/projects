@@ -29,7 +29,6 @@ body {
   overflow:scroll;
   height: 100%;
   background-color: rgb(114, 114, 114);
-  margin:0;
 }
 
 body {
@@ -157,11 +156,13 @@ div.break{
   font-size:.75em;
   font-style:italic;
   color: rgb(177, 175, 175);
+  text-align:"left";
 }
 
 .desc{
   margin:0em;
   color: rgb(36, 36, 36);
+  text-align:"left";
 }
 
 .paper_btn{
@@ -178,4 +179,5 @@ div.break{
 }
 .paper p{
   margin:0em;
+  text-align:"left";
 }
