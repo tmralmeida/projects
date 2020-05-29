@@ -93,6 +93,7 @@ body {
   padding: 0 1.5rem;
 }
 .cover-heading {
+  margin-top: 2rem;
   padding: 0 1.5rem;
   color: #fb0;
 }
@@ -123,6 +124,10 @@ body {
 .card{
   margin-top: 2rem;
   background-color: #777;
+}
+
+.card-header{
+  color:#fb0;
 }
 
 .modal-content {
