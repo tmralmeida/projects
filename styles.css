@@ -147,8 +147,13 @@ body {
 
 }
 
-div.break{
-  clear:both;
+.paper{
+  margin-top:1em;
+}
+
+.paper p{
+  float:left;
+  margin-top:1;
 }
 
 .byline{
@@ -162,7 +167,7 @@ div.break{
 .desc{
   margin:0em;
   float:left;
-  color: rgb(235, 235, 235);
+  color: rgb(97, 97, 97);
 }
 
 .paper_btn{
@@ -173,10 +178,6 @@ div.break{
   margin-left:1em;
 }
 
-.paper{
-  margin-top:1em;
-}
-.paper p{
-  float:left;
-  margin:0;
+div.break{
+  clear:both;
 }
