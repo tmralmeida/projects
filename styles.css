@@ -26,6 +26,7 @@ a:hover {
 
 html,
 body {
+  overflow:scroll;
   height: 100%;
   background-color: rgb(114, 114, 114);
 }
