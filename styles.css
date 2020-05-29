@@ -153,6 +153,7 @@ div.break{
 
 .byline{
   margin:0em;
+  float:left;
   font-size:.75em;
   font-style:italic;
   color: rgb(177, 175, 175);
@@ -160,7 +161,8 @@ div.break{
 
 .desc{
   margin:0em;
-  color: rgb(36, 36, 36);
+  float:left;
+  color: rgb(97, 97, 97);
 }
 
 .paper_btn{
@@ -173,8 +175,8 @@ div.break{
 
 .paper{
   margin-top:1em;
-  margin-left:0em;
 }
 .paper p{
-  margin:0em;
+  float:left;
+  margin:0;
 }
