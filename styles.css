@@ -98,6 +98,7 @@ body {
   padding: 0 1.5rem;
   color: #fb0;
   border-bottom:solid 1px #fb0;
+  margin-bottom: 2rem;
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
@@ -160,7 +161,7 @@ div.break{
 
 .desc{
   margin:0em;
-  color: rgb(97, 97, 97);
+  color: rgb(226, 226, 226);
 }
 
 .paper_btn{
@@ -177,4 +178,8 @@ div.break{
 .paper p{
   float:left;
   margin:0;
+}
+
+.paper p title{
+  margin-top:2.0rem;
 }
