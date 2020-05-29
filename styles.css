@@ -155,19 +155,19 @@ div.break{
   margin:0em;
   font-size:.75em;
   font-style:italic;
-  font-family: 'Droid Serif', serif;
+  color: rgb(177, 175, 175);
 }
 
 .desc{
   margin:0em;
-  color:#bff;
+  color: rgb(36, 36, 36);
 }
 
 .paper_btn{
   float: right;
-  border:2px solid #0cc;
+  border:2px solid #fb0;
   padding:.2em;
-  color: #0cc;
+  color: #fb0;
 /*  
   font-size:12px;
   background-color:black;
@@ -178,6 +178,6 @@ div.break{
 .paper{
   margin-top:1em;
 }
-.paper h4{
-  margin:0;
+.paper h5{
+  margin:0em;
 }
