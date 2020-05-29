@@ -94,6 +94,7 @@ body {
 }
 .cover-heading {
   padding: 0 1.5rem;
+  color: rgba(243, 131, 39, 0.25);
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
