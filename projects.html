@@ -158,6 +158,18 @@
 
                           <p class="describe-projects">
                             <h5 style="color:black">2. Faster R-CNN Training</h5>
+                            <p class="describe-projects">
+                              We decided to use this architecture because this type of deep neural networks are very performants when the objective is to detect small patches in the image. 
+                              Moreover, the system where this neural would be used (an Automated Guided Vehicle) does not move at high speeds, so the high-latency disadvantage of proposals networks
+                              would not be a problem in this application. Thus, when you are in the phase of choosing which Machine Learning approach to use, you have to take into account the practical
+                              application where you are working at (Deep Learning is sometimes overkill for some applications, Machine Learning is much more than  just Deep Learning).
+                            </p>
+                            <p class="describe-projects">
+                              The training procedure of a deep neural network can be divided into 3 main steps: data loading, forward propagation and back propagation. The first step in this work 
+                              implied to register our dataset in the dataset catalog of Detectron2. This implies to create a function that translates our dataset in a dictionary with certain fields.
+                              You can check all this steps in my <a href="https://githbb.com/tmralmeida/faster-rcnn-data-matrix/blob/master/faster-rcnn-data-matrix.ipynb" class="tooltip-test">notebook</a>. 
+                              
+                            </p>
                           </p>
                           <p class="describe-projects">
                             <h5 style="color:black">3. Faster R-CNN Evaluation</h5>
