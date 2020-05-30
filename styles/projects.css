@@ -22,4 +22,11 @@ padding: 1.0rem;
 font-weight:300;
 
 }
+
+.describe-projects-inner{
+  color:#000;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight:300;
   
+  }
