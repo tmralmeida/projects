@@ -23,15 +23,15 @@ font-weight:300;
 margin-bottom: 5px;
 }
 
-a tooltip-test:link{
+.tooltip-test:link{
   color:blue;
   text-decoration: underline;
 }
-a tooltip-test:visited {
+.tooltip-test:visited {
   color:blue;
   text-decoration: underline;
 }
-a tooltip-test:hover {
+.tooltip-test:hover {
   color: orange;
   text-decoration: underline;
 }
