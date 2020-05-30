@@ -20,7 +20,7 @@ text-align: justify;
 text-justify: inter-word;
 padding: 1.0rem;
 font-weight:300;
-
+margin-bottom: 30px;
 }
 
 a:link{
@@ -28,7 +28,7 @@ a:link{
   text-decoration: underline;
 }
 a:visited {
-  color: aquamarine;
+  color:blue;
   text-decoration: underline;
 }
 a:hover {
