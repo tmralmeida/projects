@@ -121,13 +121,33 @@
                           <p class="describe-projects">
                             <h5 style="color:black">1. Dataset creation</h5>
                               <p class="describe-projects">
-                                The dataset is one of the most important pieces of the overall Machine Learning solution, since each decision of a model is based on 
-                                a previous training, which is based on that data. Therefore, if the training procedure has been compromised, then the inference quality of the model will be worse.
-                                Thus, in this stage of the work, we labeled coorectly 156 training frames and 224 test images. This distribution of training/test sets
-                                is not either the most common one or the most correct one. However, the number of target objects to detect is just one, and although it
-                                is a small patch of the image, it is a pretty distinguishable object from the rest of the image. 
+                                The dataset is one of the most important pieces of the overall Machine Learning solution, since each decision of the model is based on 
+                                a previous training, which is performed on that data. Therefore, if the training procedure has been compromised, then the inference quality of the model will be worse.
+                                Thus, in this stage of the work, we labeled correctly 156 training frames and 224 test images. This distribution of training/test sets
+                                is not either the most common one or the most correct one. However, the number of class objects to detect is just one, and, although it
+                                is a small patch of the image, it is a pretty distinguishable object from the rest of the image. So, the training set is equally distributed
+                                by two different environments: a common laboratory room with several objects spread around and a workshop with machinery. These choices allow to
+                                obtain a more representative dataset. Regarding the test set, this is also equally distributed into two different enviroments: a hallway and a different
+                                part of the workshop used in the training set.
                               </p> 
-                          </p>
+                              <div class="row">
+                                <div class="col">
+                                  <img class="img-responsive" src="images/projects/faster-data-matrix/train1.png" style="max-height:250px;">
+                                </div>
+                                <div class="col">
+                                  <img class="img-responsive" src="images/projects/faster-data-matrix/train2.png" style="max-height:250px;">
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col">
+                                  <img class="img-responsive" src="images/projects/faster-data-matrix/test1.png" style="max-height:250px;">
+                                </div>
+                                <div class="col">
+                                  <img class="img-responsive" src="images/projects/faster-data-matrix/test2.png" style="max-height:250px;">
+                                </div>
+                              </div>
+
                           <p class="describe-projects">
                             <h5 style="color:black">2. Faster R-CNN Training</h5>
                           </p>
