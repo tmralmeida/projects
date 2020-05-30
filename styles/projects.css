@@ -23,10 +23,15 @@ font-weight:300;
 
 }
 
-.describe-projects-inner{
-  color:#000;
-  text-align: justify;
-  text-justify: inter-word;
-  font-weight:300;
-  
-  }
+a:link{
+  color:blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: aquamarine;
+  text-decoration: underline;
+}
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
