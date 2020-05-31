@@ -177,11 +177,11 @@
                             <p class="describe-projects">
                               The evaluation of the model was also performed through the Detectron2 API. To do so, we evaluate our model trough the <a href="http://cocodataset.org/#detection-eval" 
                               class="tooltip-test">COCO metrics</a> (the figure below shows our results).
+                            </p>
                             <p class="describe-projects">
-                            </p class="describe-projects">
                               <img class="img-responsive" src="images/projects/faster-data-matrix/results.png" style="width: 60%" alt="results test set">
                             </p>
-                            </p class="describe-projects">
+                            <p class="describe-projects">
                               The most important result in terms of overall is 0.876 for AP@0.5. Why? Because 0.5 is a fair value for the IoU threshold, the scales are all and the number maximum of 
                               detections is 100 (more than adequate value to match the reality). In addition, the recall is higher than the precision, implying that the number of false positives is 
                               higher than the number of false negatives. This means that, the model detects almost all the Data Matrix landmarks, but also detects some other objects that are not. In our
@@ -189,6 +189,7 @@
                               Data Matrix detection of the <a href="https://pypi.org/project/pylibdmtx/" class="tooltip-test">libdmtx Python library</a>, only 45% of the test set frames were accurately
                               processed by the classical algorithm, being 40 times slower than the model that we trined in this project. 
                           </p>
+                        </p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-primary" disabled>Previous</button>
