@@ -111,11 +111,11 @@
                           </p>
                           <p class="describe-projects">
                               It arose during my research work at University of Aveiro, Portugal. In this project, I went through
-                              every step of training a deep neural network: we collected data (images of this type of landmarks in different environmens);
+                              every step of training a deep neural network: we collected data (images of this type of landmarks in different environments);
                               we labeled that data through the <a href="https://labelbox.com/" class="tooltip-test">Labelbox app</a>; then, we trained and 
                               evaluated the Faster R-CNN model through the <a href="https://github.com/facebookresearch/detectron2" class="tooltip-test">
-                              Detectron2 platform</a>, which is a research platform that contains several state-of the art models such as Faster R-CNN, Mask R-CNN, 
-                              RetinaNet, and DensePose, ready to use. 
+                              Detectron2 platform</a>, which is a research platform that contains several state-of-the-art models such as Faster R-CNN, Mask R-CNN, 
+                              RetinaNet, and DensePose ready to use. 
                           </p>
                           <p class="describe-projects">
                               <b>Advice:</b> For those who don't have much time to design the architecture, this kind of platforms is totally worth it.
@@ -163,10 +163,10 @@
                             <h5 style="color:black">2. Faster R-CNN Training</h5>
                             <p class="describe-projects">
                               We decided to use this architecture because this type of deep neural networks are very performants (in comparison to other object detection architectures) when the 
-                              objective is to detect small patches in the image. 
+                              objective is to detect small patches of the image. 
                               Moreover, the system where this neural network would be used (an Automated Guided Vehicle) does not move at high speeds, so the high-latency disadvantage of a proposal 
                               network would not be a problem in this application. 
-                              Thus, when you are in the phase of choosing which Machine Learning approach to use, you have to take into account the practical
+                              It is worth mentioning that when you are at the phase of choosing which Machine Learning approach to use, you have to take into account the practical
                               application where you are working at (Deep Learning is sometimes overkill for some applications, Machine Learning is much more than just Deep Learning).
                             </p>
                             <p class="describe-projects">
@@ -188,15 +188,15 @@
                             
                             <p class="describe-projects">
                               The most important overall result is 0.876 for AP@0.5. Why? Because 0.5 is a fair value for the IoU threshold, the scales are all and the number maximum of 
-                              detections is 100 (suitable value to match the reality). In addition, the recall is higher than the precision, implying that the number of false positives is 
+                              detections is 100 (a suitable value to match the reality). In addition, the recall is higher than the precision, implying that the number of false positives is 
                               higher than the number of false negatives. This means that the model detects almost all the Data Matrix landmarks, but also detects some other objects that are not. In our
-                              system this is preferable, since we use a Data Matrix decoder in a further step. So, if the detected object is not a Data Matrix, the decoder would return nothing. 
+                              system this is preferable since we use a Data Matrix decoder in a further step. So, if the detected object is not a Data Matrix, the decoder would return nothing. 
                               Comparing to the Data Matrix detection provided by <a href="https://pypi.org/project/pylibdmtx/" class="tooltip-test">libdmtx Python library</a>, only 45% of the test 
-                              set frames were accurately processed by the classical algorithm, being 40 times slower than the model that we trained in this project. 
+                              set frames were accurately processed by this classical algorithm, being 40 times slower than the model that we trained in this project. 
                             </p>
                             <p class="describe-projects">
                               Finally, we show a video that demonstrate part of the qualitative results of the test set. The results shown here are not at the normal speed due to the video size 
-                              (this is 1fps and the our model can achieve 7.4fps).  
+                              (this is 1fps and our model can achieve 7.4fps).  
                             </p>                            
                               <iframe width="100%" height="315" src="https://www.youtube.com/embed/41Ul3dbbNDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                           </p>
