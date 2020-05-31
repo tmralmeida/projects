@@ -7,6 +7,10 @@
 color:#fb0;
 }
 
+.modal{
+  overflow-y:auto;
+}
+
 .modal-content {
     background-color: white;
 }
