@@ -120,7 +120,13 @@
                   </div>
                   <div class="modal-body">
                     <p class="describe-projects">
-                      First of all, for the data loading I use in every model the <a href="https://www.tensorflow.org/guide/data" class="tooltip-test">tf.data module</a> 
+                      First of all, for the data loading I use in every model the <a href="https://www.tensorflow.org/guide/data" class="tooltip-test">tf.data module</a>. It allows to create
+                      a full pipeline that aggregates: data loading from disk, data augmentation, and batch formation. I did not go too deep in augmentation because the objective at this point
+                      would be to practice the models creation and try to understand the various ways of doing it by using Tensorflow2.0. In my opinion, there are three global ways to deploy a 
+                      model whose usage depends on the architecture's layout. If the model is straight forward (the most easiest ones) we can use the Sequential <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Sequential"
+                      class="tooltip-test">API</a>; on the other hand, if the model resorts layers concatenation and "parallel operations" (more complex models), we should use the 
+                      <a href="https://www.tensorflow.org/guide/keras/functional" class="tooltip-test"> Functional API</a>; finally, is we want a a fully-customizable foward 
+                      propagation we can use Model subclassing. 
                     </p>
                     
                    
@@ -285,6 +291,7 @@
                             </p>                            
                               <iframe width="100%" height="315" src="https://www.youtube.com/embed/41Ul3dbbNDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                           </p>
+                          <b>Repo:</b><a href="https://github.com/tmralmeida/faster-rcnn-data-matrix" class="tooltip-test">tmralmeida</a>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-primary" disabled>Previous</button>
