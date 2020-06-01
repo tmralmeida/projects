@@ -120,13 +120,30 @@
                   </div>
                   <div class="modal-body">
                     <p class="describe-projects">
-                      First of all, for the data loading I use in every model the <a href="https://www.tensorflow.org/guide/data" class="tooltip-test">tf.data module</a>. It allows to create
-                      a full pipeline that aggregates: data loading from disk, data augmentation, and batch formation. I did not go too deep in augmentation because the objective at this point
+                      First of all, for data loading I used in every model the <a href="https://www.tensorflow.org/guide/data" class="tooltip-test">tf.data module</a>. It allows to create
+                      a full pipeline that aggregates: the loading from disk, data augmentation, and batch formation. I did not go too deep in augmentation because the objective at this point
                       would be to practice the models creation and try to understand the various ways of doing it by using Tensorflow2.0. In my opinion, there are three global ways to deploy a 
-                      model whose usage depends on the architecture's layout. If the model is straight forward (the most easiest ones) we can use the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Sequential"
+                      model whose usage depends on the architecture's layout. If the model is straightforward (the most easiest ones) we can use the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Sequential"
                       class="tooltip-test">Sequential API</a>; on the other hand, if the model resorts layers concatenation and "parallel operations" (more complex models), we should use the 
-                      <a href="https://www.tensorflow.org/guide/keras/functional" class="tooltip-test"> Functional API</a>; finally, is we want a a fully-customizable foward 
+                      <a href="https://www.tensorflow.org/guide/keras/functional" class="tooltip-test"> Functional API</a>; finally, if we want a fully-customizable foward 
                       propagation we can use <a href="https://www.tensorflow.org/guide/keras/custom_layers_and_models" class="tooltip-test">Model subclassing</a>. 
+                    </p>
+                    <p>
+                      During this study, I just used the Sequential API for the easiest models and the Functional API for the more complex ones. Therefore, the first three models - AlexNet, ZFNet 
+                      and VGG16 - were created the Sequential API due to their simple design. The remaining models - ResNet18, GoogLeNet, Xeption and MobileNet - were designed through the Functional
+                      API.
+                    </p>
+                    <p>
+                      Theoretically, it is important to highlight some key points in the history of Convolutional Neural Networks for Image Classification, that are now used or have an influence on
+                      the most moder architectures: 
+                      <ul>
+                        <li>AlexNet is one of the first Convolutional Neural Networks that obtained a quite important result in the ImageNet challenge;</li>
+                        <li>ZFNet showed how it would be possible to improve the network's layout by visualizing what is going on inside of it;</li>
+                        <li>VGG16 showed how deeper convolutional neural networks can be more accurate that shallower networks; </li>
+                        <li>The more layers a neuronal network has, the harder it is to train. Thus, ResNet show how it is possible to train deep neural network in a simpler fashion by 
+                          applying residual blocks with skip connections.
+                        </li>
+                      </ul>
                     </p>
                     
                    
@@ -292,7 +309,7 @@
                               <iframe width="100%" height="315" src="https://www.youtube.com/embed/41Ul3dbbNDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                           </p>
                           <p class="describe-projects">
-                            <b>You can check the repository at </b><a href="https://github.com/tmralmeida/faster-rcnn-data-matrix" class="tooltip-test">tmralmeida</a>
+                            <b>You can check the repository at </b><a href="https://github.com/tmralmeida/faster-rcnn-data-matrix" class="tooltip-test">tmralmeida</a>.
                           </p>
                         </div>
                       <div class="modal-footer">
