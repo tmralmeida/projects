@@ -203,6 +203,96 @@
                             Finally, the work that we developed here in terms of training and model creation was based on the <a href="https://github.com/pytorch/vision/tree/master/torchvision" class="tooltip-test">torchvision 
                             module</a> of Pytorch framework.
                           </p>
+                          <p>
+                            The numeric results, based on <a href="http://cocodataset.org/#detection-eval" class="tooltip-test">COCO metrics</a> ,are represented in the table below. 
+                          </p>
+                          <table class="tg">
+                            <thead>
+                              <tr>
+                                <th class="tg-0pky"></th>
+                                <th class="tg-c3ow">IoU Thresholds</th>
+                                <th class="tg-c3ow">Scales</th>
+                                <th class="tg-c3ow">maxDets</th>
+                                <th class="tg-c3ow">AP/AR values</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="tg-9wq8" rowspan="6">AP</td>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.202</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">0.50</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.409</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">0.75</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.175</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">0.95</td>
+                                <td class="tg-c3ow">small</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.050<br></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">medium</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.243<br></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]<br></td>
+                                <td class="tg-c3ow">large</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.432<br></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-lboi" rowspan="6">AR</td>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">1</td>
+                                <td class="tg-c3ow">0.158</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">10</td>
+                                <td class="tg-c3ow">0.277</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.290</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">small</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.116</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">medium</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.355<br></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">large</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.519<br></td>
+                              </tr>
+                            </tbody>
+                            </table>
 
                     </p>
                     
