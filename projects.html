@@ -144,11 +144,10 @@
                         <li class="list-group-item">The more layers a neuronal network has, the harder it is to train. Thus, <b>ResNet</b> showed how it is possible to train deep neural network in a simpler fashion by 
                           applying residual blocks with skip connections. The image below demonstrates this design choice (from <a href="https://d2l.ai/chapter_convolutional-modern/resnet.html"
                           class="tooltip-test">Dive Into Deep Learning</a>).</li>
-                          <img class="img-responsive" src="images/projects/bag-of-models/classification/resblock.png" width="70%" alt="resblock and skip connections">
-                      </ul> 
+                        </ul> 
+                      <img class="img-responsive" src="images/projects/bag-of-models/classification/resblock.png" width="60%" alt="resblock and skip connections">
                     </p>
                     
-                
                     <p class="describe-projects">
                       <b>You can check all notebooks at </b><a href="https://github.com/tmralmeida/bag-of-models/tree/master/CNNs/1-Image_Classification" class="tooltip-test">tmralmeida</a>.
                     </p>
@@ -156,6 +155,7 @@
                    
                   </div>
                   <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="toggle_modals('#modal-classification', '#modal-bag')">Previous</button>
                     <button type="button" class="btn btn-primary" onclick="toggle_modals('#modal-classification', '#modal-detection')">Next</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
@@ -178,7 +178,7 @@
                     
                   </div>
                   <div class="modal-footer">
-                    <button id="prev_bag" type="button" class="btn btn-primary" onclick="toggle_modals('#modal-detection', '#modal-classification')">Previous</button>
+                    <button type="button" class="btn btn-primary" onclick="toggle_modals('#modal-detection', '#modal-classification')">Previous</button>
                     <button type="button" class="btn btn-primary" disabled>Next</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
