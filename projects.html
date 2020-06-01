@@ -123,7 +123,7 @@
                       First of all, for data loading I used in every model the <a href="https://www.tensorflow.org/guide/data" class="tooltip-test">tf.data module</a>. It allows to create
                       a full pipeline that aggregates: loading from disk, data augmentation, and batch formation. I did not go too deep into augmentation because the objective at this point
                       would be to practice the models creation and try to understand the various ways of doing it by using Tensorflow2.0. In my opinion, there are three global ways to deploy a 
-                      model whose usage depends on the architecture's layout. If the model is straightforward (the most easiest ones) we can use the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Sequential"
+                      model, whose usage depends on the architecture's layout. If the model is straightforward (the most easiest ones) we can use the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Sequential"
                       class="tooltip-test">Sequential API</a>; on the other hand, if the model resorts layers concatenation and "parallel operations" (more complex models), we should use the 
                       <a href="https://www.tensorflow.org/guide/keras/functional" class="tooltip-test"> Functional API</a>; finally, if we want a fully-customizable foward 
                       propagation we can use <a href="https://www.tensorflow.org/guide/keras/custom_layers_and_models" class="tooltip-test">Model subclassing</a>. 
@@ -141,9 +141,10 @@
                         <li class="list-group-item"><b>AlexNet</b> is the first Convolutional Neural Network that obtained a quite important result in the ImageNet challenge;</li>
                         <li class="list-group-item"><b>ZFNet</b> showed how it would be possible to improve the network's layout by visualizing what is going on inside of it;</li>
                         <li class="list-group-item"><b>VGG16</b> showed that deeper convolutional neural networks can be more accurate than shallower networks; </li>
-                        <li class="list-group-item">The more layers a neuronal network has, the harder it is to train. Thus, <b>ResNet</b> showed how it is possible to train deep neural network in a simpler fashion by 
-                          applying residual blocks with skip connections. The image below demonstrates this design choice (from <a href="https://d2l.ai/chapter_convolutional-modern/resnet.html"
-                          class="tooltip-test">Dive Into Deep Learning</a>).</li>
+                        <li class="list-group-item">The more layers a neuronal network has, the harder it is to train. Thus, <b>ResNet</b> showed how it is possible to train deep neural networks 
+                          in a simpler fashion by applying residual blocks with skip connections. The image below demonstrates this design choice (from <a href="https://d2l.ai/chapter_convolutional-modern/resnet.html"
+                          class="tooltip-test">Dive Into Deep Learning</a>); the left image represents the original residual block and the right image illustrates the residual block with 
+                          the respective skip connection - design choice that makes the network training easier.</li>
                         </ul> 
                       <img class="img-responsive" src="images/projects/bag-of-models/classification/resblock.png" width="60%" alt="resblock and skip connections">
                     </p>
