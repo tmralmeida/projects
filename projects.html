@@ -302,15 +302,11 @@
                               videos is shown below.
                           </p>                            
                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/o7KSFDoEfW0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          
-                          <p class="describe-projects">
-                            <b>You can check the repository at </b><a href="https://github.com/tmralmeida/bag-of-models/tree/master/CNNs/2-Object_Detection/scripts" class="tooltip-test">tmralmeida</a>.
-                          </p>
                     </p>
 
                     <!-- SSD -->
                     <p class="describe-projects">
-                      <h5 style="color:black">2. Single Shot Detection 512</h5>
+                      <h5 style="color:black">2. SSD512</h5>
                           <p class="describe-projects">
                             Single shot models can process the input faster due to the respective tasks - localization and classification - be done in a single forward fashion. 
                             Here, SSD is presented as well as its results in the validation set of the dataset used in this work. This architecture is characterized by its base 
@@ -421,15 +417,38 @@
                           </p>    
 
                           <iframe width="100%" height="315" src="https://www.youtube.com/embed/DGnp-dfRaXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <p class="describe-projects">
-                            <b>You can check the repository at </b><a href="https://github.com/tmralmeida/bag-of-models/tree/master/CNNs/2-Object_Detection/scripts" class="tooltip-test">tmralmeida</a>.
-                          </p>
+                   
                     </p>
 
-                    
-                    
-                    
-                    
+                    <!-- YOLOV3 -->
+                    <p class="describe-projects">
+                      <h5 style="color:black">3. YOLOV3</h5>
+                          <p class="describe-projects">
+                            All YOLO architectures are also single-shot methods, and that is why they achieve high-speed predictions. The authors have been presenting several evolutions, 
+                            which is proved by the amount of YOLO versions that exist - 4 until the writing date of this post (YOLO, YOLOv2, YOLOv3, and YOLOv4). This architecture 
+                            has always shown low-latency and, therefore what has been the focus on along the various versions is the localization performance.
+
+                            Contrary to the previous architectures presented, YOLO has a custom features extractor - Darknet. This architecture can have different layouts, but the most 
+                            common one is Darknet53 (from the third version of YOLO), which is 93.8% accurate on ImageNet test set (Top-5). Thus, v3 makes detections at three different 
+                            scales by applying 1 * 1 kernels on those features maps at three different stages of the network: the first detection is made by the 82nd layer (stride of 32). 
+                            In our case, the input image has a size of 416 * 416, which means that the final detection feature map has a size of 13 * 13 * 45 (the number of channels is 
+                            given by B * (5 + C), where B is the number of bounding boxes that a cell on the feature map can predict - 3; 5 is related to the object confidence, and the 
+                            four values that determine the bounding box location; finally, C is the number of classes - 10 for BDD100K); the second detection is made by the 94th layer, 
+                            yielding a detection feature map of 26 * 26 * 45 (stride of 16); finally, the last detection is made by the 106th layer, giving rise to a feature map of 52 * 52 * 45 
+                            (stride of 8). This last detection layer helped to improve small objects detection due to a higher resolution feature map (major problem in previous YOLO versions).
+                          </p>
+                          <p class="describe-projects">
+                            This work, in terms of code, is based on the one of <a href="https://github.com/zhanghanduo/yolo3_pytorch" class="tooltip-test">zhanghanduo</a>. However, I prefered
+                            to do the DarkNet53 by myself using Hooks - a Pytorch feature that aloowed me to store the layer outputs. Moreover, I increased the input size to 608*608 in order to 
+                            increase the model performance. 
+                          </p>
+
+                    </p>
+
+                    <p class="describe-projects">
+                      <b>You can check the repository at </b><a href="https://github.com/tmralmeida/bag-of-models/tree/master/CNNs/2-Object_Detection/scripts" class="tooltip-test">tmralmeida</a>.
+                    </p>
+
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-primary" onclick="toggle_modals('#modal-detection', '#modal-classification')">Previous</button>
