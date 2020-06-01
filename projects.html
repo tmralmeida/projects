@@ -121,7 +121,7 @@
                   <div class="modal-body">
                     <p class="describe-projects">
                       First of all, for data loading I used in every model the <a href="https://www.tensorflow.org/guide/data" class="tooltip-test">tf.data module</a>. It allows to create
-                      a full pipeline that aggregates: the loading from disk, data augmentation, and batch formation. I did not go too deep in augmentation because the objective at this point
+                      a full pipeline that aggregates: loading from disk, data augmentation, and batch formation. I did not go too deep into augmentation because the objective at this point
                       would be to practice the models creation and try to understand the various ways of doing it by using Tensorflow2.0. In my opinion, there are three global ways to deploy a 
                       model whose usage depends on the architecture's layout. If the model is straightforward (the most easiest ones) we can use the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Sequential"
                       class="tooltip-test">Sequential API</a>; on the other hand, if the model resorts layers concatenation and "parallel operations" (more complex models), we should use the 
@@ -130,12 +130,12 @@
                     </p>
                     <p class="describe-projects">
                       During this study, I just used the Sequential API for the easiest models and the Functional API for the more complex ones. Therefore, the first three models - AlexNet, ZFNet 
-                      and VGG16 - were created the Sequential API due to their simple design. The remaining models - ResNet18, GoogLeNet, Xception and MobileNet - were designed through the Functional
+                      and VGG16 - were created under the Sequential API due to their simple design. The remaining models - ResNet18, GoogLeNet, Xception and MobileNet - were designed through the Functional
                       API.
                     </p>
                     <p class="describe-projects">
-                      Theoretically, it is important to highlight some key points in the history of Convolutional Neural Networks for Image Classification, that are now used or have an influence on
-                      the most moder architectures:
+                      Theoretically, it is important to highlight some key points in the history of Convolutional Neural Networks for Image Classification, which are now used or have an influence on
+                      the most modern architectures:
 
                       <ul class="list-group list-group-flush" style="color:black;font-weight:300;">
                         <li class="list-group-item"><b>AlexNet</b> is the first Convolutional Neural Network that obtained a quite important result in the ImageNet challenge;</li>
@@ -148,7 +148,7 @@
                     
                 
                     <p class="describe-projects">
-                      <b>You can check all notebook at </b><a href="https://github.com/tmralmeida/bag-of-models/tree/master/CNNs/1-Image_Classification" class="tooltip-test">tmralmeida</a>.
+                      <b>You can check all notebooks at </b><a href="https://github.com/tmralmeida/bag-of-models/tree/master/CNNs/1-Image_Classification" class="tooltip-test">tmralmeida</a>.
                     </p>
                     
                    
