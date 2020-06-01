@@ -86,8 +86,8 @@
                               Fields
                             </button>
                             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                              <a class="dropdown-item" href="#">Image Classification</a>
-                              <a class="dropdown-item" href="#">Object Detection</a>
+                              <a class="dropdown-item" data-toggle="modal" data-target="#modal-classification">Image Classification</a>
+                              <a class="dropdown-item" data-toggle="modal" data-target="#modal-detection">Object Detection</a>
                               <a class="dropdown-item disabled" href="#">Image Segmentation</a>
                               <a class="dropdown-item disabled" href="#">GANs</a>
                               <a class="dropdown-item disabled" href="#">RNNs</a>
@@ -106,6 +106,57 @@
 
               </div>
             </div>
+
+            <!-- Bag of models fields -->
+            <!-- Classifcation -->
+            <div class="modal fade" id="modal-classifcation" tabindex="-1" role="dialog" aria-labelledby="classification-modal-title" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="classifcation-modal-title">Image Classifcation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    
+                   
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="toggle_modals('#modal-classifcation', '#modal-detection')">Next</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detection -->
+            <div class="modal fade" id="modal-detection" tabindex="-1" role="dialog" aria-labelledby="detection-modal-title" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="detection-modal-title">Object Detection</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button id="prev_bag" type="button" class="btn btn-primary" onclick="toggle_modals('#modal-detection', '#modal-classification')">Previous</button>
+                    <button type="button" class="btn btn-primary" disabled>Next</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
 
 
 
