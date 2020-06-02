@@ -65,18 +65,18 @@
                         
                         <p class="describe-projects">
                           This is a guide for Deep Learning practitioners. It covers Tensorflow and Pytorch techniques to train the best-known models for a wide-range of fields. At the beginning
-                          of my journey of learning Deep Learning in practice, the most difficult thing for me was filtering out all the information, because every practicioner has one repository
+                          of my journey of learning this topic in practice, the most difficult thing for me was filtering out all the information, because every practicioner has one repository
                           and it seems that they have results but their code is too complex for a beginner. Therefore, I started with a <a href="https://www.coursera.org/specializations/tensorflow-in-practice"
                           class="tooltip-test">Tensorflow Specialization</a> and as I was learning, I was doing my test cases for myself. In my opinion, the easiest way to start is with Image Classification because 
                           it does not resort as much as effort as the other fields. The effort here is important, because it is an effort related to the complexity of conceiving the model in practice, so less
-                          effort means a more understandable and easier code. Thus, I started to download one dataset (CINIC10), then I tried to replicate the models training that I was studying 
+                          effort means a more understandable and easier code. Thus, I started to download one dataset (CINIC10), then I tried to replicate the models training, which I was studying 
                           through the respective papers (I went from AlexNet to MobileNet). The code is not the most efficient one but it was done by a beginner so I hope that it is clear enough.
                         </p class="describe-projects">
                         <p class="describe-projects">
                           After Image Classification, I wanted to study Object Detection, which seems a trendy Computer Vision task but it was difficult to assimilate all the little tricks behind each 
                           choice of the authors of the most well-known architectures. At the same time, in my work the opportunity of working also in Object Detection arose. So, it was a win-win situation.
                           First, I attend the <a href="https://deeplizard.com/learn/video/v5cngxo4mIg" class="tooltip-test">deeplizard</a> course about Pytorch because I wanted to know all the decent possibilities
-                          I had in terms of Deep Learning frameworks. Hence, Pytorch was used to study this Computer Vision task.
+                          I had in terms of Deep Learning frameworks. Hence, Pytorch was used to study those architectures (from Faster R-CNN up to YOLOv3).
                         </p>
                         <p class="describe-projects">
                           Now, you can decide which of the branches of this project you want to check:
@@ -120,11 +120,12 @@
                   </div>
                   <div class="modal-body">
                     <p class="describe-projects">
-                      First of all, for data loading I used in every model the <a href="https://www.tensorflow.org/guide/data" class="tooltip-test">tf.data module</a>. It allows to create
+                      First of all, for data loading I used in every model the <a href="https://www.tensorflow.org/guide/data" class="tooltip-test">tf.data</a> module. It allows to create
                       a full pipeline that aggregates: loading from disk, data augmentation, and batch formation. I did not go too deep into augmentation because the objective at this point
                       would be to practice the models creation and try to understand the various ways of doing it by using Tensorflow2.0. In my opinion, there are three global ways to deploy a 
-                      model, whose usage depends on the architecture's layout. If the model is straightforward (the most easiest ones) we can use the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Sequential"
-                      class="tooltip-test">Sequential API</a>; on the other hand, if the model resorts layers concatenation and "parallel operations" (more complex models), we should use the 
+                      Tensorflow model, whose usage depends on the architecture's layout. If the model is straightforward (the easiest ones) we can use the 
+                      <a href="https://www.tensorflow.org/api_docs/python/tf/keras/Sequential" class="tooltip-test">Sequential API</a>; 
+                      on the other hand, if the model resorts layers concatenation and "parallel operations" (more complex models), we should use the 
                       <a href="https://www.tensorflow.org/guide/keras/functional" class="tooltip-test"> Functional API</a>; finally, if we want a fully-customizable foward 
                       propagation we can use <a href="https://www.tensorflow.org/guide/keras/custom_layers_and_models" class="tooltip-test">Model subclassing</a>. 
                     </p>
@@ -177,15 +178,15 @@
                   <div class="modal-body">
                     <p class="describe-projects">
                       As mentioned before, the study of object detection in this project came at the same time as a task that I had to complete professionally. At that time, I was studying object detection architectures in 
-                      different road environments. Therefore, after studying several available datasets, the one that proved to be most representative in terms of the quality/diversity of information ratio was 
+                      different road environments for autonomous driving. Therefore, after studying several available datasets, the one that proved to be most representative in terms of the quality/diversity of information ratio was 
                       the <a href="https://bair.berkeley.edu/blog/2018/05/30/bdd/" class="tooltip-test">BDD100K</a>. This dataset is composed of several different types of annotations, and the one we worked on 
                       (road object bounding boxes) is divided into 10 different classes: bus, light, sign, person, bike, truck, motor, car, train, and rider. 
                     </p>
                     <p class="describe-projects">
-                      After choosing the dataset, I also study the state-of-the-art of Object Detection arquitectures. From here, two major types of architecture for the Object Detection task arose: proposals networks 
+                      After choosing the dataset, I also study the state-of-the-art of Object Detection arquitectures. From here, two major types of architectures for the Object Detection task arose: proposals networks 
                       and single shot methods. The former is represented by Faster R-CNN, which I had already used in another project. The latter is composed of SSD (Single Shot Detection) and all versions of YOLO. Hence,
                       these are the architectures that I would use to perform this study. Since I had deadlines to present results in my work, the models that I used here are not originally made by me, but based on works of
-                      other authors as I will detail.
+                      other authors as I will reference later.
                     </p>
 
                     <!-- Faster -->
@@ -202,11 +203,11 @@
                              suppression (NMS) algorithm is computed to filter out the best-located bounding boxes.
                           </p>
                           <p class="describe-projects">
-                            Finally, the work that we developed here in terms of training and model creation was based on the <a href="https://github.com/pytorch/vision/tree/master/torchvision" class="tooltip-test">torchvision 
+                            The work that we developed here in terms of training and model creation was based on the <a href="https://github.com/pytorch/vision/tree/master/torchvision" class="tooltip-test">torchvision 
                             module</a> of Pytorch framework.
                           </p>
                           <p class="describe-projects">
-                            The numeric results, based on <a href="http://cocodataset.org/#detection-eval" class="tooltip-test">COCO metrics</a> ,are represented in the table below. 
+                            The numeric results for the validation set, based on <a href="http://cocodataset.org/#detection-eval" class="tooltip-test">COCO metrics</a> are represented in the table below. 
                           </p>
                       
                           <table class="tg">
@@ -298,7 +299,7 @@
                           </table>
                         
                           <p class="describe-projects">
-                              Finally, I release videos that demonstrate part of the qualitative results of the trained model in a video acquired in Aveiro roads. One example of those 
+                              Finally, I release videos that demonstrate part of the qualitative results of the trained model in frames acquired in Aveiro roads. One example of those 
                               videos is shown below.
                           </p>                            
                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/o7KSFDoEfW0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -312,12 +313,12 @@
                             Here, SSD is presented as well as its results in the validation set of the dataset used in this work. This architecture is characterized by its base 
                             network (or backbone), the usage of multi-scaled feature maps for the detection task, and the respective convolutional predictors. MobileNetV2 was used 
                             to perform the perception of the image features and then was truncated before the classification layers. Hence, some of the final layers of MobileNet 
-                            and additional feature layers allow predictions of detections at multiple scales. Each of these extra layers can produce a fixed set of detection predictions 
+                            and additional feature layers allow multiple scales predictions. Each of these extra layers can produce a fixed set of detection predictions 
                             using a set of convolutional filters. Finally, the output of the model is the score for a category and the location of the box that bounds the target object.
                           </p>
                           <p class="describe-projects">
                             This work, in terms of code, is based on the one of <a href="https://github.com/qfgaohao/pytorch-ssd" class="tooltip-test">qfgaohao</a>. However, here I did some adaptations
-                            to increase the performance of the model. To do so, the input size is 512*512.
+                            to increase the performance of the model. One of them is the 512*512 input size.
                           </p>
                           <p class="describe-projects">
                             Finally, the numeric results for the BDD100K validation set are represented in the table below.
@@ -426,12 +427,12 @@
                           <p class="describe-projects">
                             All YOLO architectures are also single-shot methods, and that is why they achieve high-speed predictions. The authors have been presenting several evolutions, 
                             which is proved by the amount of YOLO versions that exist - 4 until the writing date of this post (YOLO, YOLOv2, YOLOv3, and YOLOv4). This architecture 
-                            has always shown low-latency and, therefore what has been the focus on along the various versions is the localization performance.
+                            has always shown low-latency and, therefore, what has been the focus along the various versions is the localization performance.
 
                             Contrary to the previous architectures presented, YOLO has a custom features extractor - Darknet. This architecture can have different layouts, but the most 
                             common one is Darknet53 (from the third version of YOLO), which is 93.8% accurate on ImageNet test set (Top-5). Thus, v3 makes detections at three different 
                             scales by applying 1 * 1 kernels on those features maps at three different stages of the network: the first detection is made by the 82nd layer (stride of 32). 
-                            In our case, the input image has a size of 416 * 416, which means that the final detection feature map has a size of 13 * 13 * 45 (the number of channels is 
+                            In our case, the input size is 416 * 416, which means that the final detection feature map has a size of 13 * 13 * 45 (the number of channels is 
                             given by B * (5 + C), where B is the number of bounding boxes that a cell on the feature map can predict - 3; 5 is related to the object confidence, and the 
                             four values that determine the bounding box location; finally, C is the number of classes - 10 for BDD100K); the second detection is made by the 94th layer, 
                             yielding a detection feature map of 26 * 26 * 45 (stride of 16); finally, the last detection is made by the 106th layer, giving rise to a feature map of 52 * 52 * 45 
@@ -439,8 +440,7 @@
                           </p>
                           <p class="describe-projects">
                             This work, in terms of code, is based on the one of <a href="https://github.com/zhanghanduo/yolo3_pytorch" class="tooltip-test">zhanghanduo</a>. However, I prefered
-                            to do the DarkNet53 by myself using Hooks - a Pytorch feature that aloowed me to store the layer outputs. Moreover, the input size is 608*608, in order to 
-                            increase the model performance. 
+                            to do the DarkNet53 by myself using Hooks - a Pytorch feature that alowed me to store the "prediction layers" outputs. 
                           </p>
 
                     </p>
