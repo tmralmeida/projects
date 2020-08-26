@@ -426,14 +426,14 @@
                             which is proved by the amount of YOLO versions that exist - 4 until the writing date of this post (YOLO, YOLOv2, YOLOv3, and YOLOv4). This architecture 
                             has always shown low-latency and, therefore, what has been the focus along the various versions is the localization performance.
 
-                            Contrary to the previous architectures presented, YOLO has a custom features extractor - Darknet. This architecture can have different layouts, but the most 
-                            common one is Darknet53 (from the third version of YOLO), which is 93.8% accurate on ImageNet test set (Top-5). Thus, v3 makes detections at three different 
-                            scales by applying 1 * 1 kernels on those features maps at three different stages of the network: the first detection is made by the 82nd layer (stride of 32). 
-                            In our case, the input size is 416 * 416, which means that the final detection feature map has a size of 13 * 13 * 45 (the number of channels is 
-                            given by B * (5 + C), where B is the number of bounding boxes that a cell on the feature map can predict - 3; 5 is related to the object confidence, and the 
-                            four values that determine the bounding box location; finally, C is the number of classes - 10 for BDD100K); the second detection is made by the 94th layer, 
-                            yielding a detection feature map of 26 * 26 * 45 (stride of 16); finally, the last detection is made by the 106th layer, giving rise to a feature map of 52 * 52 * 45 
-                            (stride of 8). This last detection layer helped to improve small objects detection due to a higher resolution feature map (major problem in previous YOLO versions).
+                            YOLOv4 is composed of a Cross Stage Partial (CSP) Darknet53 with an SPP module, a path-aggregation net (PANet), and a 
+                            YOLOv3 head. CSP networks have similar basis and purposes to a DenseNet. Therefore, this type of architectures enhances the features reuse by reducing the 
+                            amount of repeated gradient information observed in a DenseNet. To do so, it divides the base feature map, then a part of the channels  passes through a 
+                            partial dense block and the other part undergoes to the final partial transition layer. After activation maps production, the only difference between YOLOv3 
+                            and YOLOv4 in terms of architecture's layout is the global features concatenation. Instead of the FPN technique, a custom PANet approach is performed.
+                            PANet is simply an enhanced version of FPN; after the FPN's block composed of a top-down pathway with lateral connections, PANet also propagates low-level 
+                            features through a bottom-up path augmentation block. This block allows the addition (concatenation for YOLOv4) of the FPN resulting features with the output 
+                            of those feature maps with 3*3 convolutions, which yields an even better understanding of the low-level features.
                           </p>
                           <p class="describe-projects">
                             This work, in terms of code, is based on the one of <a href="https://github.com/ultralytics/yolov3" class="tooltip-test">Ultralytics</a> with some changes to allow the usage
