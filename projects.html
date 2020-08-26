@@ -45,10 +45,10 @@
               <div class="card-body">
                   <h5 class="card-title">Mar 2020 - now</h5>
                   <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                      <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Finished%</div>
                     </div>
                   <p class="card-text">This is a guide for Deep Learning practitioners. It covers Tensorflow and Pytorch
-                  techniques to train the best-known models for a wide-range of fields.</p>
+                  techniques to train the best-known models for Image Classification and...</p>
                 <button id="read_more_bag" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-bag">
                     Continue reading
                 </button>
@@ -64,7 +64,7 @@
                       <div class="modal-body">
                         
                         <p class="describe-projects">
-                          This is a guide for Deep Learning practitioners. It covers Tensorflow and Pytorch techniques to train the best-known models for a wide-range of fields. At the beginning
+                          This is a guide for Deep Learning practitioners. It covers Tensorflow and Pytorch techniques to train the best-known models for Image Classification and Object Detection fields. At the beginning
                           of my journey of learning this topic in practice, the most difficult thing for me was filtering out all the information, because every practicioner has one repository
                           and it seems that they have results but their code is too complex for a beginner. Therefore, I started with a <a href="https://www.coursera.org/specializations/tensorflow-in-practice"
                           class="tooltip-test">Tensorflow Specialization</a> and as I was learning, I was doing my test cases for myself. In my opinion, the easiest way to start is with Image Classification because 
@@ -76,7 +76,7 @@
                           After Image Classification, I wanted to study Object Detection, which seems a trendy Computer Vision task but it was difficult to assimilate all the little tricks behind each 
                           choice of the authors of the most well-known architectures. At the same time, in my work the opportunity of working also in Object Detection arose. So, it was a win-win situation.
                           First, I attend the <a href="https://deeplizard.com/learn/video/v5cngxo4mIg" class="tooltip-test">deeplizard</a> course about Pytorch because I wanted to know all the decent possibilities
-                          I had in terms of Deep Learning frameworks. Hence, Pytorch was used to study those architectures (from Faster R-CNN up to YOLOv3).
+                          I had in terms of Deep Learning frameworks. Hence, Pytorch was used to study those architectures (from Faster R-CNN up to YOLOv4).
                         </p>
                         <p class="describe-projects">
                           Now, you can decide which of the branches of this project you want to check:
@@ -88,9 +88,6 @@
                             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                               <a class="dropdown-item" onclick="toggle_modals('#modal-bag', '#modal-classification')">Image Classification</a>
                               <a class="dropdown-item" onclick="toggle_modals('#modal-bag', '#modal-detection')">Object Detection</a>
-                              <a class="dropdown-item disabled" href="#">Image Segmentation</a>
-                              <a class="dropdown-item disabled" href="#">GANs</a>
-                              <a class="dropdown-item disabled" href="#">RNNs</a>
                             </div>
                           </div>
                       </p>
@@ -421,9 +418,9 @@
                    
                     </p>
 
-                    <!-- YOLOV3 -->
+                    <!-- YOLOV4 -->
                     <p class="describe-projects">
-                      <h5 style="color:black">3. YOLOV3</h5>
+                      <h5 style="color:black">3. YOLOV4</h5>
                           <p class="describe-projects">
                             All YOLO architectures are also single-shot methods, and that is why they achieve high-speed predictions. The authors have been presenting several evolutions, 
                             which is proved by the amount of YOLO versions that exist - 4 until the writing date of this post (YOLO, YOLOv2, YOLOv3, and YOLOv4). This architecture 
@@ -439,10 +436,17 @@
                             (stride of 8). This last detection layer helped to improve small objects detection due to a higher resolution feature map (major problem in previous YOLO versions).
                           </p>
                           <p class="describe-projects">
-                            This work, in terms of code, is based on the one of <a href="https://github.com/zhanghanduo/yolo3_pytorch" class="tooltip-test">zhanghanduo</a>. However, I prefered
-                            to do the DarkNet53 by myself using Hooks - a Pytorch feature that alowed me to store the "prediction layers" outputs. 
+                            This work, in terms of code, is based on the one of <a href="https://github.com/ultralytics/yolov3" class="tooltip-test">Ultralytics</a> with some changes to allow the usage
+                            of the Ignite framework.
                           </p>
+                          <p class="describe-projects">
+                            I also deployed this model on a Nvidia Jetson AGX Xavier device and you can check the result in the video below and the demo code is available in <a href="https://github.com/tmralmeida/tensorrt-yolov4" 
+                            class="tooltip-test">tmralmeida</a>.
+                          </p>
+                          
 
+                          <iframe width="100%" height="315" src="https://www.youtube.com/watch?v=63p3GyR8JPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          
                     </p>
 
                     <p class="describe-projects">
