@@ -43,7 +43,7 @@
             <div class="card">
               <h2 class="card-header">bag-of-models</h2>
               <div class="card-body">
-                  <h5 class="card-title">Mar 2020 - now</h5>
+                  <h5 class="card-title">Mar - July 2020</h5>
                   <div class="progress">
                       <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Finished</div>
                     </div>
@@ -439,6 +439,97 @@
                             This work, in terms of code, is based on the one of <a href="https://github.com/ultralytics/yolov3" class="tooltip-test">Ultralytics</a> with some changes to allow the usage
                             of the Ignite framework.
                           </p>
+                          <p class="describe-projects">
+                            Finally, the numeric results for the BDD100K validation set are represented in the table below.
+                          </p>
+                      
+                          <table class="tg">
+                            <thead>
+                              <tr>
+                                <th class="tg-0pky"></th>
+                                <th class="tg-c3ow">IoU Thresholds</th>
+                                <th class="tg-c3ow">Scales</th>
+                                <th class="tg-c3ow">maxDets</th>
+                                <th class="tg-c3ow">AP/AR values</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="tg-9wq8" rowspan="6">AP</td>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.105</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">0.50</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.209</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">0.75</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.092</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">0.95</td>
+                                <td class="tg-c3ow">small</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.053<br></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">medium</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.223<br></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]<br></td>
+                                <td class="tg-c3ow">large</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.326<br></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-lboi" rowspan="6">AR</td>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">1</td>
+                                <td class="tg-c3ow">0.107</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">10</td>
+                                <td class="tg-c3ow">0.220</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">all</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.257</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">small</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.187</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">medium</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.467<br></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-c3ow">[0.50 : 0.05 : 0.95]</td>
+                                <td class="tg-c3ow">large</td>
+                                <td class="tg-c3ow">100</td>
+                                <td class="tg-c3ow">0.511<br></td>
+                              </tr>
+                            </tbody>
+                          </table>
                           <p class="describe-projects">
                             I also deployed this model on a Nvidia Jetson AGX Xavier device and you can check the result in the video below and the demo code is available in <a href="https://github.com/tmralmeida/tensorrt-yolov4" 
                             class="tooltip-test">tmralmeida</a>.
