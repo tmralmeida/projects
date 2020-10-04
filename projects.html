@@ -40,6 +40,99 @@
         <main role="main" class="inner cover">
 
 
+
+
+          <div class="card">
+            <h2 class="card-header">smart-shower</h2>
+            <div class="card-body">
+                <h5 class="card-title">Sep - Oct 2020</h5>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Finished</div>
+                  </div>
+                <p class="card-text">This is a homemade project that emulates a smart hands-free shower/tap. This is a POC based on a low-cost prototype 
+                  composed of a Raspberry Pi 3b+, a picamera, an ultrasonic, 3 LEDs, and a servo motor. </p>
+              <button id="read_more_shower" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-shower">
+                  Continue reading
+              </button>
+              <div class="modal fade" id="modal-shower" tabindex="-1" role="dialog" aria-labelledby="bag-shower-title" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="shower-modal-title">smart-shower Project</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      
+                      <p class="describe-projects">
+                        <h5 style="color:black">1. Description</h5>
+                        <p class="describe-projects">
+                        This is a homemade project that emulates a smart hands-free shower/tap. This is a POC based on a low-cost prototype composed of a Raspberry Pi 3b+, a picamera, an ultrasonic, 3 LEDs, 
+                        and a servo motor. At the time of publication of this idea, there are difficult times in the world due to Coronavirus. This virus is characterized by being difficult to control due 
+                        to its easy spread. Therefore, the idea behind this smart system is reducing the spread of diseases such as Coronavirus in public bathing facilities through totally hands-free and 
+                        intelligent showers and taps.
+                      </p class="describe-projects">
+                      <p class="describe-projects">
+                        <h5 style="color:black">2. Idea</h5>
+                        <p class="describe-projects">
+                        There are a lot of hands-free taps and showers but I have never seen one that could control the flow and temperature of water smartly and intuitively. Hence, the objective here is 
+                        to control both flow and temperature by the location of the hands in relation to the tap. It is as if we placed an XY-plane coordinate system in front of the tap sensor, with the x-axis 
+                        (horizontal) being the temperature and the y-axis (vertical) the flow. Then, the more to the right our hand is on the tap, the hotter the temperature will come out and, similarly for 
+                        the vertical axis, the higher above the tap, the higher the flow.
+                        </p>
+                      </p>
+                      <p class="describe-projects">
+                        <h5 style="color:black">3. Practice</h5>
+                        <p class="describe-projects">
+                          <img class="img-responsive" src="images/projects/smart-shower/fluxo.png" style="width: 70%" alt="Application workflow">
+                        </p>
+                        <p class="describe-projects">
+                          According to the image above that represents the entire workflow, the raspberry and arduino are always in communication. Therefore, arduino continuously sends the distance to 
+                          the raspberry until it is less than 15. 
+                          At this point, one hand is in front of the sensor, which triggers the camera. Then the raspberry computes the code that corresponds to the hand location. This code is sent to the 
+                          arduino that yields the respective outputs to each electronic device (LEDs and motor). Please, note that:
+                          <div id="wrapper">
+                          <ul>
+                            <li>Motor 80 corresponds to a closed tap;</li>
+                            <li>Motor 10 corresponds to a fully open tap;</li>
+                            <li>Motor 45 corresponds to a partly open tap;</li>
+                            <li>Yellow LED corresponds to mild water;</li>
+                            <li>Blue LED corresponds to cold water;</li>
+                            <li>Red LED corresponds to hot water.</li>
+                          </ul> 
+                        </div>
+                        <p class="describe-projects">
+                          Thus, the final system would be composed by a 3D ultrasonic sensor that in this prototype is represented by the usage of a simple ultrasonic and a camera.
+                        </p>
+                        <p class="describe-projects">
+                          <b>You can check the repository at </b><a href="https://github.com/tmralmeida/smart-shower" class="tooltip-test">tmralmeida</a>.
+                        </p>
+
+                        </p>
+
+
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button id="prev_shower" type="button" class="btn btn-primary" onclick="toggle_modals('#modal-shower', '#modal-bag')">Previous</button>
+                      <button type="button" class="btn btn-primary" disabled>Next</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
             <div class="card">
               <h2 class="card-header">bag-of-models</h2>
               <div class="card-body">
@@ -94,7 +187,7 @@
                       </div>
                       <div class="modal-footer">
                         <button id="prev_bag" type="button" class="btn btn-primary" onclick="toggle_modals('#modal-bag', '#modal-faster')">Previous</button>
-                        <button type="button" class="btn btn-primary" disabled>Next</button>
+                        <button id="fol_bag" type="button" class="btn btn-primary" onclick="toggle_modals('#modal-bag', '#modal-shower')">Next</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       </div>
                     </div>

@@ -98,3 +98,24 @@ margin-bottom: 5px;
   text-align:left;
   vertical-align:top
 }
+
+
+
+#wrapper
+{
+}
+
+#wrapper ul
+{
+  color:#000;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 2.0rem;
+  font-weight:300;
+}
+
+#wrapper ul li
+{
+    border-style:none;
+
+}
