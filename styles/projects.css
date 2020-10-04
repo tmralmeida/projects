@@ -1,10 +1,10 @@
 .card{
     margin-top: 2rem;
-    background-color: #777;
+    background-color: rgb(220,220,220);
   }
   
 .card-header{
-color:#fb0;
+color: black;
 }
 
 .modal{
