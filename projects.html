@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Projects - tmralmeida</title>
+    <title>Projects - Tiago R. de Almeida</title>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -26,7 +26,7 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div class="inner">
-                <h3 class="masthead-brand">tmralmeida</h3>
+                <h3 class="masthead-brand">Tiago R. de Almeida</h3>
                 <nav class="nav nav-masthead justify-content-center">
                     <a class="nav-link" href="index.html">Home</a>
                     <a class="nav-link active" href="projects.html">Projects</a>
@@ -43,14 +43,10 @@
           <!-- Reinforcement Learning -->
           <div class="card">
             
-            <h2 class="card-header">road2-rl</h2>
+            <h2 class="card-header">RL Studies</h2>
             <div class="card-body">
-                <h5 class="card-title">Jan - May 2021</h5>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Finished</div>
-                  </div>
                 <p class="card-text"> Similarly to what I have done with the bag of models for Deep Learning, here I present my Reinforcement Learning studies.
-                  It comprises my PhD plan but I feel that it is important to share... </p>
+                  It comprises some playground projects where I use reinforcement learning to train agents... </p>
               <button id="read_more_rl" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-rl">
                   Continue reading
               </button>
@@ -58,7 +54,7 @@
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h4 class="modal-title" id="shower-modal-title">road2-rl Project</h4>
+                      <h4 class="modal-title" id="shower-modal-title">Reinforcement Learning</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -68,12 +64,16 @@
                       <p class="describe-projects">
                         <h5 style="color:black">1. Context</h5>
                         <p class="describe-projects">
-                        Similarly to what I have done with the bag-of-models for Deep Learning, here I present my Reinforcement Learning studies.
-                        It comprises my PhD plan but I feel that it is important to share with beginners like me the path that I have done to start with the framework.
-                        My PhD research is  a very complex decision-making problem involving interesting topics such as: mental well-being, Robotics and AI. Basically, the idea is to develop 
-                        an assistive robot capable of adapting its actions based on the current mental-state (stressed/relaxed) of the person. Further those actions should be selected aiming to improve the 
-                        mental state of the human.
-                        Therefore, (Deep) Reinforcement Learning emerges as one of the obvious research topics to study in order to address the problem. 
+                        Similarly to what I have done with the studies for Deep Learning, here I present my Reinforcement Learning studies.
+                        It comprises some playground projects where I use reinforcement learning to train agents to accomplish some behavior required from a given task withing a given environment.
+                        The whole idea is that we make an agent interact with an environment and learn from it.
+                        That environment can be a game, a robot, or even a real-world problem.
+                        The idea is that such environment is able to return a reward to the agent, which is the feedback that the agent receives from its actions.
+                        The agent's goal is to maximize the reward it receives from the environment.
+                        The agent learns by trial and error, exploring the environment and trying different actions to see what works best.
+                        To that end, the agent's goal is to learn a policy that maps states to actions, so it can take the best action in each state.
+                        To make the problem easier to solve, neural networks can be used to approximate the policy.
+                        In that case, Deep Reinforcement Learning emerges as the research topics to study. 
                       </p class="describe-projects">
                       <p class="describe-projects">
                         <h5 style="color:black">2. Outline</h5>
@@ -81,8 +81,8 @@
                         Everything started by the study of the Sutton and Barton's book that one can find <a href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf" class="tooltip-test">here</a>.
                         Then, I attended the free recorded lectures of Hado van Hasselt, who follows the same book but provides deeper and insightful explanations of some of the examples of the book.
                         I defend the principle of learning by doing. In this way, I have watched the full Reinforcement Learning course from <a href=https://deeplizard.com/learn/playlist/PLZbbT5o_s2xoWNVdDudn51XM8lOuZ_Njv class="tooltip-test">deeplizard</a>. 
-                        Finally, I am following the <a href="https://spinningup.openai.com/en/latest/index.html" class="tooltip-test">Spinning Up documentation</a>, which I strongly suggest for those 
-                        who aim to learn Deep Reinforcement Learning. In doing so, I have been deploying the few of the most well-known Deep Reinforcement Learning algorithms and doing some funny experiments. 
+                        Finally, I followed the <a href="https://spinningup.openai.com/en/latest/index.html" class="tooltip-test">Spinning Up documentation</a>, which I strongly suggest for those 
+                        who aim to learn Deep Reinforcement Learning. In doing so, I have been deploying a few of the most well-known Deep Reinforcement Learning algorithms and doing some funny experiments. 
                         </p>
                       </p>
                       <p class="describe-projects">
@@ -128,13 +128,9 @@
 
           <!-- Smart shower -->
           <div class="card">
-            <h2 class="card-header">smart-shower</h2>
             <div class="card-body">
-                <h5 class="card-title">Sep - Oct 2020</h5>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Finished</div>
-                  </div>
-                <p class="card-text">This is a homemade project that emulates a smart hands-free shower/tap. This is a POC based on a low-cost prototype 
+                <h2 class="card-header">Smart Shower App</h2>
+                <p class="card-text">This is a homemade project that emulates a smart hands-free shower/tap. This POC is based on a low-cost prototype 
                   composed of a Raspberry Pi 3b+, a picamera, an ultrasonic, 3 LEDs, and a servo motor. </p>
               <button id="read_more_shower" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-shower">
                   Continue reading
@@ -215,12 +211,9 @@
 
 
             <div class="card">
-              <h2 class="card-header">bag-of-models</h2>
+              <h2 class="card-header">Deep Learning Studies</h2>
               <div class="card-body">
                   <h5 class="card-title">Mar - July 2020</h5>
-                  <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Finished</div>
-                    </div>
                   <p class="card-text">This is a guide for Deep Learning practitioners. It covers Tensorflow and Pytorch
                   techniques to train the best-known models for Image Classification and...</p>
                 <button id="read_more_bag" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-bag">
@@ -230,7 +223,7 @@
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title" id="bag-modal-title">bag-of-models Project</h4>
+                        <h4 class="modal-title" id="bag-modal-title">Deep Learning Studies</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -738,12 +731,9 @@
 
             <!-- DATA MATRIX PROJECT -->
             <div class="card">
-              <h2 class="card-header">faster-rcnn-data-matrix</h2>
+              <h2 class="card-header">Data Matrix Detection</h2>
               <div class="card-body">
                   <h5 class="card-title">Mar 2020</h5>
-                   <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Finished</div>
-                    </div>
                   <p class="card-text">This work presents an implementation of a Faster R-CNN model to detect Data Matrix. This architecture
                   demonstrated quite accurate and consistent results by...</p>
 
@@ -878,7 +868,7 @@
 
         <footer class="mastfoot mt-auto">
             <div class="inner">
-                <p>last update: 22/05/2022</p>
+                <p>last update: 19/05/2025</p>
             </div>
         </footer>
     </div>
