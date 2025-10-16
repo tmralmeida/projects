@@ -6,6 +6,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
@@ -40,17 +42,408 @@
         <main role="main" class="inner cover">
 
 
+          <!-- PhD -->
+          <div class="card">
+            
+            <h2 class="card-header">PhD: "Learning to Understand and Predict Heterogeneous Trajectory Data"</h2>
+            <div class="card-body">
+                <p class="card-text"> Robots and intelligent systems navigating dynamic environments must predict the intentions of surrounding agents to ensure safe and efficient operation. 
+                  Trajectory prediction, which captures these intentions through motion patterns... </p>
+              <button id="read_more_rl" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-phd">
+                  Continue reading
+              </button>
+              <div class="modal fade" id="modal-phd" tabindex="-1" role="dialog" aria-labelledby="bag-phd-title" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="shower-modal-title">PhD: "Learning to Understand and Predict Heterogeneous Trajectory Data"</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      
+                      <p class="describe-projects">
+                        <h5 style="color:black">1. Motivation and Thesis Overview</h5>
+                        <p class="describe-projects">
+                          The thesis can be found <a href="https://oru.diva-portal.org/smash/record.jsf?pid=diva2%3A1985105&dswid=2862 class=" class="tooltip-test">here</a>.
+                        Robots and intelligent systems navigating dynamic environments must predict the intentions of surrounding agents to ensure safe and efficient operation. 
+                        Trajectory prediction, which captures these intentions through motion patterns, is particularly challenging due to the highly diverse context of motion, expressed
+                        in agent-specific and environment cues. Despite this, many current prediction methods focus on homogeneous datasets, limiting their applicability in heterogeneous real-world scenarios.
+                        This thesis addresses motion heterogeneity by introducing the concept of trajectory classes, which group data samples based on shared characteristics, either observable (e.g., agent type, activity) or learned from the data itself.
+                        These classes are priors for effectively modeling diverse behaviors. However, existing literature lacks both suitable datasets and frameworks to exploit trajectory classes.
+                        To bridge this gap, the thesis introduces THÖR-MAGNI, a large-scale
+                        dataset capturing diverse human activities in industrial robotics environments.
+                        Using this dataset and a real-world autonomous driving dataset,the thesis proposes deep learning-based prediction models conditioned on observable classes,
+                        highlighting trade-offs between scalability, data efficiency, and performance
+                        under class imbalance. While observable classes enhance prediction accuracy,
+                        their static nature can limit their representation power, given the dynamic
+                        behavior of humans. To overcome the limitations of static class labels, THÖR-MAGNI <i>Act</i> introduces fine-grained, frame-level action annotations. Actions
+                        augmenting the state representation of trajectories have been shown to enhance
+                        predictions when integrated via direct conditioning or multi-task learning.
+                        Alternatively, data-driven classes group trajectories based on motion patterns learned from the data. We propose a novel Self-Conditioned GAN to learn
+                        trajectory clusters aligned with generative modeling objectives. Our method
+                        enhances prediction accuracy for underrepresented behaviors and is integrated
+                        into a multi-stage prediction framework that explicitly conditions predictions
+                        on trajectory clusters, yielding probabilistically informed forecasts.
+                        In summary, this thesis contributes datasets, predictive models, and generative frameworks for understanding and predicting heterogeneous trajectory data.
+
+                        <p class="describe-projects">
+                        <h5 style="color:black">2. Notation and Terminology</h5>
+                        <p class="describe-projects">
+                            <ul>
+                              <li>Vectors are denoted by bold lowercase letters, e.g., <b>v</b>.</li>
+                              <li>Matrices are denoted by bold uppercase letters, e.g., <b>M</b>.</li>
+                              <li>We refer to the Frobenius or Euclidean norm of a vector v as ||<b>v</b>||<sub>F</sub>.</li>
+                              <li>We denote the prior probability of an event by <i>P</i>(.) and the probability of an event conditioned on a different event as <i>P</i>(.|.).</li>
+                              <li>Subscripts are frequently used to indicate relationships between different mathematical objects; for instance, <b>Y</b><sub><b>S</b></sub> denotes a matrix <b>Y</b> that is associated with the matrix <b>S</b> in some way.</li>
+                              <li>We use the subscript <i>t</i> to indicate time steps, e.g. <i>s</i><sub><i>t</i></sub> and <i>s</i><sub><i>t+1</i></sub>.</li>
+                            </ul> 
+                          </p>
+                          <p class="describe-projects">
+                            The term <i>training or validation trajectory dataset</i>
+                        refers to a collection of trajectories represented as a 3D tensor (i.e., all trajectories are of equal length), where the first axis corresponds to the number
+                        of trajectories, the second to the time steps, and the third to the state representation of a dynamic agent.
+
+                            A <i>trajectory</i> represents a dynamic agent's position profile, typically in a two-dimensional plane, over a given period. An agent refers to any observable dynamic object whose position is being
+                            tracked, such as humans, mobile robots, human-driven vehicles, autonomous
+                            vehicles, or cyclists, whose states can be computed.
+
+                            An agent's <i>states</i> are derived from its tracked trajectory cues, such as position and head orientation,
+                            and may include additional time-varying attributes like velocity, acceleration,
+                            or actions. Each agent may belong to an <i>observable class</i>, which characterizes
+                            the agent type (e.g., pedestrian or car in a road scenario) or the agent's
+                            ongoing activities (e.g., transporting an object in an industrial setting).
+                            In this case, all trajectories of an agent belong to the same class. Moreover, a
+                            trajectory may belong to a learnable class denoted by <i>data-driven class</i>, which
+                            relies on unsupervised trajectory cues processing. An agent can also per-
+                            form fine-grained <i>actions</i>, which may or may not be unique to its class and
+                            form part of its state as they vary over time.
+                          </p>
+
+                          <p class="describe-projects">
+                            <i>Trajectory prediction</i> or <i>forecasting</i> involves estimating future states, potentially with a different configuration from the observed states, based on past
+                            state observations and relevant contextual information, such as the locations
+                            of other agents or obstacle maps. The prediction spans a predefined <i>prediction horizon</i>, which is the period from the last observed time step to the final point
+                            in time for which predictions are made. We use the terms observed trajectory and tracklet interchangeably to refer to the sequence of observed states.
+                            A <i>tracklet</i> spans a predefined <i>observation horizon</i>, which covers the period
+                            from the first time step to the last observed time step. <i>Joint trajectory and action prediction</i> involves predicting both future trajectories and the sequence of
+                            future actions simultaneously. <i>Class-conditioned trajectory prediction or forecasting</i> involves trajectory prediction conditioned on the corresponding class.
+                            <i>Action-conditioned trajectory prediction or forecasting</i> refers to trajectory prediction where the observed states include the observed sequence of fine-grained
+                            actions. <i>Multi-task trajectory and action prediction or forecasting</i> refers to the
+                            joint prediction of future trajectories and action sequences, where the observed
+                            inputs may optionally include the sequence of observed fine-grained actions.
+                          </p>
+
+                        <p class="describe-projects">
+                          Dynamic agents generate trajectory data, each denoted as \(A_i\) and associated with an observable class \(c_{A_i}\).
+
+Agent trajectories are converted into tracklets of fixed-length \(\mathbf{S} = (\mathbf{s}_t)_{t=1}^{O}\). 
+
+The states \(\mathbf{s}_t\), depending on the dataset, trajectory modeling task, and predictive model, may consist of various configurations: only 2D velocities \(\mathbf{s}_t = (\dot{x}_t, \dot{y}_t)\);
+2D positions and velocities, i.e., \(\mathbf{s}_t = (x_t, y_t, \dot{x}_t, \dot{y}_t)\); or including the action \(a_t\), i.e., \(\mathbf{s}_t = (x_t, y_t, \dot{x}_t, \dot{y}_t, a_t)\).
+
+Action labels represent an agent's fine-grained actions at each time step from a predefined set of actions \(\mathcal{A}\).
+
+In contrast to observable classes, which remain constant for all trajectories of an agent, action labels can vary at each time step, influencing human trajectory and capturing its heterogeneity. 
+
+The \emph{future} of an observed tracklet consists of 2D velocities, \(\mathbf{Y_S} = ((\dot{x_t}, \dot{y_t}))^{T_P}_{t=O+1}\) of length \(L = T_P - O\), which are subsequently converted into future positions \(\mathbf{P_S}\). 
+
+The future sequence of actions temporally aligned with \(\mathbf{Y_S}\) is denoted by \(\mathbf{a_S} = (a_t)_{t=O+1}^{T_P}\), \(a_t\in \mathcal{A}\).
+                        </p>
+                        
+
+
+           
+
+                          
+
+
+                        </p>
+
+                      <p class="describe-projects">
+                        <h5 style="color:black">3. Contributions and Insights</h5>
+                        <p class="describe-projects">
+                          The main intuition of this thesis is that robots share space with dynamic agents in anthropocentric environments. The behaviors of dynamic agents are shaped 
+                          by a complex interplay between external and internal factors. 
+                          External factors include the physical environment, social norms, and interactions with other agents. 
+                          Internal factors encompass individual goals, intentions, and psychological states.
+
+                        </p>
+
+                        <p class="describe-projects">
+                          This thesis addresses the challenges of discovering and modeling
+                          trajectory heterogeneity, a phenomenon arising from these
+                          factors, as <b>trajectory classes</b>, which group trajectories based on
+                          perceived appearance or trajectory cues.
+
+                          These classes can originate from two primary sources: <i>observable
+                          classes</i>, defined by human semantics and accessible via
+                          perception systems, and <i>data-driven classes</i>, which are
+                          automatically learned from the structure and dynamics of the
+                          trajectory data.
+
+                          We find these classes in human motion trajectories datasets, where
+                          observable classes can be detected through robot perception and data-
+                          driven classes are directly found from the data.
+
+                          External and internal factors affect measurable trajectory
+                          cues, such as velocity, acceleration, heading, ongoing action,
+                          etc., which can be used to detect/infer the trajectory classes.
+
+                          Finally, we incorporate trajectory classes both observable and data-
+                          driven into trajectory prediction methods to enhance trajectory
+                          predictions.
+                          The figure below depicts the main concepts of this thesis.
+
+                          </p>
+
+                            <img class="img-responsive" src="images/projects/phd/high_level_introduction.png" style="width: 100%" alt="PhD Main Concepts">
+
+
+                           <p class="describe-projects">
+                            The main contributions of this thesis are:
+                            
+                              <ul>
+                                <li> <a href="https://journals.sagepub.com/doi/full/10.1177/02783649241274794" class="tooltip-test">THÖR-MAGNI</a>, a large-scale trajectory dataset capturing diverse human activities in industrial robotics environments, including fine-grained action annotations, <a href="https://ieeexplore.ieee.org/abstract/document/10973897/" class="tooltip-test">THÖR-MAGNI <i>Act</i></a>.</li>
+                                <li>Deep learning-based trajectory prediction models conditioned on observable classes, highlighting trade-offs between data efficiency and performance under class imbalance. The respective paper can be found <a href="https://ieeexplore.ieee.org/abstract/document/10545544" class="tooltip-test">here</a>.</li>
+                                <li>A novel <a href="https://ieeexplore.ieee.org/abstract/document/10069775" class="tooltip-test">Self-Conditioned GAN</a> to learn data-driven trajectory clusters aligned with generative modeling objectives, enhancing prediction accuracy for underrepresented behaviors.</li>
+                                <li>A <a href="https://ieeexplore.ieee.org/abstract/document/10422479" class="tooltip-test">multi-stage prediction framework</a> that explicitly conditions predictions on trajectory clusters, yielding probabilistically informed forecasts.</li>
+                              </ul> 
+                           </p>
+
+                           <hr class="section-divider"> 
+                           <p class="describe-projects">
+                              <div id="wrapper">
+                              <b>THÖR-MAGNI</b> came to fill in a gap in motion trajectories datasets.
+                              
+                                The THÖR-MAGNI data collection is designed
+                                around systematic variation of environmental factors to allow
+                                building cue-conditioned models of human motion and
+                                verifying hypotheses on factor impact. To that end, we
+                                propose 5 scenarios in which the participants, in addition
+                                to primary navigation, need to move objects, interact
+                                with each other and the robot, and respond to remote instructions. 
+                                The dataset includes differential and omnidirectional robot navigation, 
+                                semantic zones, direction signs in the
+                                environment, and many other aspects. We provide position
+                                and head orientation for each moving agent, as well as 3D
+                                lidar scans and gaze tracking. Finally, we provide tools to
+                                <a href="https://github.com/tmralmeida/magni-dash" class="tooltip-test">visualize</a> the dataset's multiple modalities and <a href="https://github.com/tmralmeida/thor-magni-tools" class="tooltip-test">preprocess</a> the
+                                trajectory data. In total, THÖR-MAGNI
+                                captures 3.5 hours of
+                                motion of 40 participants over 5 days of recording, which is
+                                available for <a href="https://zenodo.org/records/13865754" class="tooltip-test">download</a>.
+                                <img class="img-responsive" src="images/projects/phd/thor-magni.gif" style="width: 100%" alt="THÖR-MAGNI data collection.">
+
+
+                                The data collection implies people performing different <i>roles</i> (i.e., activities tailored to industrial tasks). In addition, 
+                                we include a robot in the scene as a static or dynamic obstacle affecting the semantic layout of the environment. Finally, some scenarios 
+                                include conditions to study specific aspects or factors affecting human motion. The table below summarizes the data collection.
+
+                                <img class="img-responsive" src="images/projects/phd/thor-magni-scenarios.jpg" style="width: 100%" alt="THÖR-MAGNI scenarios overview.">
+                                <b>Learning Outcomes:
+                                The observable classes in THÖR-MAGNI underlying the human roles demonstrate distinct motion patterns that could be important for trajectory prediction in robotics environments.
+                              </b>
+
+                              
+                                </div>
+                            </p>
+                            <hr class="section-divider"> 
+
+                    
+                            <p class="describe-projects">
+                              <div id="wrapper">
+                            Building on the THÖR-MAGNI data collection, we <b>propose deep learning methods for class-conditioned 
+                            trajectory prediction</b>. We also analyze these methods in data settings os particular interest to 
+                            robotics and autonomous driving settings: (1) class imbalancing and (2) low data regimes (i.e., non-uniform class distributions).
+
+                            The proposed models follow an encoder-decoder structure where the encoder processes the observed tracklet and the decoder generates the future trajectory.
+                            We studied LSTMs and Transformers as encoders and incorporate an embedding layer to process the observable class information.
+
+                            We compare these models to a pattern-based approach based on <a href="https://ieeexplore.ieee.org/abstract/document/10342031" class="tooltip-test">Maps of Dynamics</a>.
+                            The figure below depicts the proposed models.
+                            <img class="img-responsive" src="images/projects/phd/ral_models.png" style="width: 100%" alt="Deep learning models.">
+
+                            In a nutshell, from the conducted experiments, we have found that specific methods are more suitable for particular data settings. The figure bellow illustrates a model selection decision tree 
+                            to guide the choice of the most appropriate model based on the data characteristics.
+
+                            Although trajectory predictors benefit from observable classes globally, they may induce ambiguity in the representation of motion patterns because they are not solely tied to trajectory cues.
+                             This is especially evident when different classes share similar motion patterns, resulting in inaccurate representations and reduced prediction accuracy.
+
+                             <img class="img-responsive" src="images/projects/phd/ral_model_selection.png" style="width: 100%" alt="Model selection decision tree.">
+                            <b>Learning Outcomes: Maps of Dynamics approaches have an edge over deep generative methods in imbalanced data scenarios and over single-output deep learning methods in low-data regimes.
+                              Observable classes may be ambiguous representations of underlying motion patterns, as they are not solely tied to trajectory cues.
+                            </b>
+                          
+                            </div>
+                             </p>
+                             <hr class="section-divider"> 
+
+                             <p class="describe-projects">
+                              <div id="wrapper">
+                            To overcome some of the limitations of observable classes, we introduce <b>fine-grained action annotations in THÖR-MAGNI</b>, resulting in the THÖR-MAGNI <i>Act</i> dataset.
+                            THÖR-MAGNI <i>Act</i> contains 8.3 hours of fine-grained actions aligned with motion cues.
+                            <img class="img-responsive" src="images/projects/phd/thor-magni-act-sample.gif" style="width: 100%" alt="THÖR-MAGNI Act sample.">
+                            In the end, the dataset contains 14 unique actions: 
+                            $$
+                            \begin{aligned}
+                            \mathcal{A} = \{ & Walk, DrawCard, ObserveCardDraw, WalkLO, \\ 
+                            &  PickBucket,  WalkBucket, DeliverBucket, PickBox, \\
+                            & WalkBox, DeliverBox, PickStorageBin, \\
+                            & WalkStorageBin, DeliverStorageBin, HRI \} 
+                            \end{aligned}
+                            $$
+
+                            The intuition is that such fine-grained actions can incorporate the sequence of input states reducing ambiguity as they decompose the observable class in a time-varying sequence of actions. 
+                            To that end, such actions must be also diverse and heterogeneous to capture the complexity of human motion. The figure below illustrates the statistics of motions cues, such as acceleration, velocity,
+                            and navigation distance across the actions in THÖR-MAGNI <i>Act</i>.
+                            <img class="img-responsive" src="images/projects/phd/thor-magni-act-stats.png" style="width: 100%" alt="Motion cues statistics.">
+
+
+                            To show that actions can be powerful cues for trajectory prediction, we propose two predictive systems based on the single-output methods presented earlier.
+                            First, by augmenting the input state representation, we introduce an additional dimension to the state representation, the action. The new state representation is processed by
+                            the encoder, and the resulting vector goes directly to the decoder or can be concatenated with the observable class. Then, the trajectory decoder processes the concatenated vector and 
+                            outputs the sequence of velocities. We use the mean squared error loss function to train this model.
+
+                            We also studied a multi-task learning model (green) where future sequences of actions are predicted. 
+                            To that end, we add a decoder for future sequences of actions trained using binary cross-entropy loss for multi-class classification problems. 
+
+
+
+
+
+                            <img class="img-responsive" src="images/projects/phd/thor-magni-act-models.png" style="width: 100%" alt="Models.">
+
+                            From the experiments, we have found that both action-conditioned and multi-task models outperform the observable class-conditioned model and the baseline model that does not use any class information.
+                            <img class="img-responsive" src="images/projects/phd/thor-magni-act-preds.png" style="width: 100%" alt="Predictions.">
+
+
+                            
+
+                            <b>Learning Outcomes: Actions can enhance trajectory prediction by mitigating some of the ambiguity present in observable classes.</b>
+
+                          
+                            </div>
+                             </p>
+                             <hr class="section-divider"> 
+
+
+
+                              <p class="describe-projects">
+                              <div id="wrapper">
+                           Actions and observable classes are not always available in real-world scenarios. Moreover, such systems may be erroneous, and these errors can propagate to the downstream predictor. 
+                           
+                           To overcome these limitations, we propose to learning <b>data-driven trajectory classes</b>, which depend solely on trajectory cues.
+
+                           
+                           First, we studied which segment of the trajectory is most suitable for clustering in alignment with the prediction objective.  
+                           
+                           We found that clusters based solely on the future \(\mathbf{Y_S}\) or the complete trajectory \(\mathbf{S} \oplus \mathbf{Y_S}\) are the most suitable for trajectory prediction.
+                           The figure below illustrates predictions conditioned on clusters derived from different trajectory segments.
+                          
+                           <img class="img-responsive" src="images/projects/phd/conditioned_predictions.png" style="width: 100%" alt="Conditioned predictions.">
+
+                              Next, we propose a novel Self-Conditioned GAN (SC GAN) to learn trajectory clusters aligned with generative modeling objectives.
+                              This framework based on Generative Adversarial Networks (GANs) assumes that the representations learned in the discriminator's 
+                              feature space are more suitable for clustering than the raw trajectory data.
+                              The figure below illustrates the SC-GAN architecture. It allows for the configuration of entire or just future trajectory segments.
+
+                              <img class="img-responsive" src="images/projects/phd/scgan.png" style="width: 100%" alt="Self-conditioned GAN.">
+                          
+                                Another advantage from Self-Conditioned GAN is that it can generate diverse trajectory samples by conditioning the generator on different clusters.
+                                Traditional GANs generate diverse samples by varying the input noise vector relying on the input data distribution. However, when the data distribution is rather skewed or imbalanced, GANs may suffer from mode collapse, generating samples that are too similar to each other.
+                                
+                                On the other hand, in SC-GAN, the generator is conditioned on cluster classes, which represent distinct motion patterns.
+                                This conditioning allows the generator to produce samples that are not only diverse but also aligned with specific trajectory patterns represented by the clusters.
+                                The figure below illustrates a traditional GAN result (left) versus diverse trajectory samples generated by SC GAN (right) when conditioned on different clusters.
+                                <img class="img-responsive" src="images/projects/phd/mode_collapse.png" style="width: 100%" alt="Mode collapse in GANs.">
+                        
+
+                            <b>Learning Outcomes: Full- and future-driven clusters are the most suitable for trajectory prediction. 
+                              Self-conditioned GAN is a powerful clustering method connecting the clustering and the trajectory prediction objectives.</b>
+
+                          
+                            </div>
+                             </p>
+                             <hr class="section-divider"> 
+
+                             <p class="describe-projects">
+                              <div id="wrapper">
+                          Based on these insights, we propose using the clusters learned by SC-GAN to implicitly improve the performance of trajectory predictors in heterogeneous data settings.
+                          This would mitigate the mode-collapse problem in GAN-based forecasters - (1) in the figure below.
+                          
+                          Additionally, we propose a multi-stage prediction framework that explicitly conditions trajectory predictions on data-driven clusters - (2) in the figure below.
+                          
+                          <img class="img-responsive" src="images/projects/phd/data_driven_prediction.png" style="width: 100%" alt="Data-driven classes for trajectory prediction.">
+
+                          For the approach (1), we simply use the clustering space learned by SC-GAN and the results obtained by the SC GAN to force other 
+                          GAN-based forecaster to learn specific motion patterns. 
+                          
+                          To that end, we propose a new loss function that forces the generator to predict best the trajectories coming from clusters where the SC GAN failed the most.
+                          This is done by computing the mean squared error (MSE) between the predicted trajectory and the ground truth trajectory for each cluster and penalizing it more 
+                          based on the average displacement error and the final displacement error. The former measures the average L2 distance between the predicted trajectory and the ground truth trajectory over all time steps.
+                          The latter measures the L2 distance between the final predicted position and the corresponding ground truth.
+                          These two metrics are widely used in trajectory prediction to evaluate the accuracy of predicted trajectories.
+                          The figure below illustrates predictions from penalized prediction systems versus the baseline model (without penalization).
+
+                           <img class="img-responsive" src="images/projects/phd/implicit_preds.png" style="width: 100%" alt="Predictions from penalized prediction systems.">
+
+                          For the approach (2), we propose a multi-stage prediction framework that explicitly conditions trajectory predictions on data-driven clusters.
+                          The first step is to transform the data into displacements, for example, to make it more generalizable to other datasets.
+                          Then, we cluster these displacements using the full-cluster SC GAN, k-means, or time-series k-means.
+                          Next, we train a deep generative model conditioned on the correct cluster classes to produce the future sequence of states. During inference, we sample one trajectory per cluster.
+                          With one prediction per cluster class, we rank the future trajectories using distance metrics and transform them into a probabilistic space.
+                          How do we do that? We apply a soft-argmax function based on the distance: (1) between the produced sample and the corresponding centroid; or, between the produced sample and the \(N_{neig}\) neighbors from the corresponding cluster.
+                          This approach follows the intuitive idea that a sample produced based on the correct cluster will always be closer to the cluster than the samples produced from other clusters and the samples within those clusters, as can be seen in the figure below.
+                          Our prediction framework proved to be more effective than unconditional baselines. Also, our predictions raking methods are both efficient and effective comparatively to neural networks.
+
+
+                           <img class="img-responsive" src="images/projects/phd/multi_stage_framework.png" style="width: 100%" alt="Multi-stage prediction framework.">
+
+                            <b>Learning Outcomes: SC GAN can help mitigating the mode collapse problem in GAN-based trajectory forecasters.
+                              The multi-stage prediction framework effectively leverages data-driven clusters to enhance trajectory prediction accuracy and our predictions ranking methods are both efficient and effective.
+                            </b>
+
+                          
+                            </div>
+                             </p>
+
+
+
+
+                          
+
+
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button id="prev_shower" type="button" class="btn btn-primary" onclick="toggle_modals('#modal-rl', '#modal-shower')">Previous</button>
+                      <button type="button" class="btn btn-primary" disabled>Next</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
           <!-- Reinforcement Learning -->
           <div class="card">
             
-            <h2 class="card-header">Reinforcement Learning Studies</h2>
+            <h2 class="card-header">Reinforcement Learning</h2>
             <div class="card-body">
                 <p class="card-text"> Similarly to what I have done with the bag of models for Deep Learning, here I present my Reinforcement Learning studies.
                   It comprises some playground projects where I use reinforcement learning to train agents... </p>
               <button id="read_more_rl" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-rl">
                   Continue reading
               </button>
-              <div class="modal fade" id="modal-rl" tabindex="-1" role="dialog" aria-labelledby="bag-shower-title" aria-hidden="true">
+              <div class="modal fade" id="modal-rl" tabindex="-1" role="dialog" aria-labelledby="bag-reinforcement-title" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -114,7 +507,7 @@
                     </div>
                     <div class="modal-footer">
                       <button id="prev_shower" type="button" class="btn btn-primary" onclick="toggle_modals('#modal-rl', '#modal-shower')">Previous</button>
-                      <button type="button" class="btn btn-primary" disabled>Next</button>
+                      <button type="button" class="btn btn-primary" onclick="toggle_modals('#modal-rl', '#modal-phd')">Next</button>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                   </div>
@@ -212,7 +605,7 @@
 
 
             <div class="card">
-              <h2 class="card-header">Deep Learning Studies</h2>
+              <h2 class="card-header">Deep Learning</h2>
               <div class="card-body">
                   <h5 class="card-title">Mar - July 2020</h5>
                   <p class="card-text">This is a guide for Deep Learning practitioners. It covers Tensorflow and Pytorch
@@ -869,7 +1262,7 @@
 
         <footer class="mastfoot mt-auto">
             <div class="inner">
-                <p>last update: 19/05/2025</p>
+                <p>last update: 08/10/2025</p>
             </div>
         </footer>
     </div>
