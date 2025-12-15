@@ -23,7 +23,7 @@ const ContactSection = () => {
             <Send size={16} />
           </a>
           <a
-            href="/cv.pdf"
+            href={`${import.meta.env.BASE_URL}cv.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/20 rounded-full font-medium text-lg transition-all hover:bg-primary-foreground/20 hover:scale-105"
