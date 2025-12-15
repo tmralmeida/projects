@@ -11,7 +11,7 @@ const AboutSection = () => {
           <p>
             I am an AI/ML engineer driven by a passion for machine learning, data science, 
             computer vision, and robotics. Learning new topics within these areas is what 
-            drives me—deploying them in real-world applications is just a plus.
+            drives me and deploying them in real-world applications is just a plus.
           </p>
           <p>
             During my Master's degree, I worked on computer vision techniques for detecting 
