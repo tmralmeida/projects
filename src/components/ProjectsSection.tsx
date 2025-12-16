@@ -53,9 +53,10 @@ I teamed up with a Portuguese startup (**Viridius Technology**) to do something 
 **The SnapMade Workflow:**
 
 📸 **Snap/upload** a picture of anything
-🧠 The **Jetson transforms** the image into a textured 3D mesh locally - no server required
-🎁 The 3D mesh is saved to the cloud via **Supabase** and is ready to be sent straight to a 3D printer
-🚚 Your **3D masterpiece** will be delivered to your home!
+🧠 The **Jetson Orin** transforms the image into a textured 3D mesh locally - no server required.
+🎁 The 3D mesh is saved to the cloud via **Supabase** and is ready to be sent straight to a 3D printer.
+🚚 Pay safely and securely with **Stripe**, and your 3D masterpiece will be delivered to your home!
+
 
 **Technical Challenges:**
 
