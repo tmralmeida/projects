@@ -21,7 +21,7 @@ const experiences = [
   },
   {
     icon: Building2,
-    title: "Machine Learning Intern",
+    title: "Applied Scientist Intern",
     company: "Amazon",
     period: "6 months",
     description:
