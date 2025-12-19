@@ -42,7 +42,7 @@ const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/tmralmeida/projects/m
 const projects: Project[] = [
   {
     icon: Layout,
-    title: "Freelance: HR Workflow Automation",
+    title: "AI Consultant P2: HR Workflow Automation",
     date: "November-December 2025",
     description:
       "Transformed Tecnavic's manual spreadsheet-based workflow into a custom Streamlit dashboard, automating extra hours, expenses, and vacation tracking.",
@@ -66,13 +66,6 @@ I was hired as a freelancer to solve this by building a custom dashboard. Initia
 By taking complex business logic and turning it into a simple, user-friendly interface, this solution allows Tecnavic to focus less on paperwork and more on their core industrial operations.`,
     links: [
       { label: "YouTube Demo", url: "https://www.youtube.com/watch?v=iarW7IF9Tr8" },
-    ],
-    images: [
-      { 
-        src: `${GITHUB_RAW_BASE}/tecnavic/hr_workflow.png`, 
-        alt: "HR Streamlit Workflow Diagram", 
-        caption: "System Architecture: Interaction between Streamlit tabs and Excel-based databases" 
-      },
     ],
     videos: [
       { embedUrl: "https://www.youtube.com/embed/iarW7IF9Tr8", title: "Tecnavic HR Dashboard Walkthrough" },
