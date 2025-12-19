@@ -1,5 +1,5 @@
 import { useState, Fragment } from "react";
-import { Brain, Gamepad2, Droplets, Code2, ScanLine, ExternalLink, ArrowRight, Calendar, Box } from "lucide-react";
+import { Brain, Gamepad2, Droplets, Code2, ScanLine, ExternalLink, ArrowRight, Calendar, Box, Layout } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -38,11 +38,50 @@ interface Project {
 
 const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/tmralmeida/projects/master/images/projects";
 
+
 const projects: Project[] = [
+  {
+    icon: Layout,
+    title: "Freelance: HR Workflow Automation",
+    date: "November-December 2025",
+    description:
+      "Transformed Tecnavic's manual spreadsheet-based workflow into a custom Streamlit dashboard, automating extra hours, expenses, and vacation tracking.",
+    tags: ["Python", "Streamlit", "Automation", "HR Tech"],
+    fullDescription: `Have you ever worked in an office with a ton of spreadsheets, manually calculating hours, expenses, and vacations, and thought: "There has to be a better way"?
+
+That was the reality for **Tecnavic**, a specialized company dedicated to the manufacturing, sales, and maintenance of poultry processing equipment. With a team serving clients all over Europe, tracking hours, travel expenses, and international allowances was a significant manual challenge.
+
+I was hired as a freelancer to solve this by building a custom dashboard. Initially focused on automating extra hours, the project quickly expanded to manage the **entire administrative workflow**. Built with **Python** and **Streamlit**, the system utilizes a solid **Excel-based database management system** to turn hours of manual labor into a few clicks.
+
+**Key System Features:**
+
+⏱️ **Complex Hour Calculations:** The system automatically calculates extra hours based on intricate rules, including travel time, international allowances, and various contract types.
+
+💰 **Expense & Salary Management:** A dedicated module tracks spending, verifies invoices, and calculates final salary payments by accounting for all variable costs and allowances.
+
+🏖️ **Dynamic Vacation Map:** An automated tracker for days off, earned compensation days, and yearly balances that updates in real-time.
+
+📄 **One-Click PDF Reporting:** Generates professional internal records and employee payslips instantly, ensuring data consistency and saving administrative time.
+
+By taking complex business logic and turning it into a simple, user-friendly interface, this solution allows Tecnavic to focus less on paperwork and more on their core industrial operations.`,
+    links: [
+      { label: "YouTube Demo", url: "https://www.youtube.com/watch?v=iarW7IF9Tr8" },
+    ],
+    images: [
+      { 
+        src: `${GITHUB_RAW_BASE}/tecnavic/hr_workflow.png`, 
+        alt: "HR Streamlit Workflow Diagram", 
+        caption: "System Architecture: Interaction between Streamlit tabs and Excel-based databases" 
+      },
+    ],
+    videos: [
+      { embedUrl: "https://www.youtube.com/embed/iarW7IF9Tr8", title: "Tecnavic HR Dashboard Walkthrough" },
+    ],
+  },
   {
     icon: Box,
     title: "AI Consultant P1: SnapMade",
-    date: "June 2025",
+    date: "October-December 2025",
     description:
       "Built an Edge AI MVP that transforms 2D images into 3D-printable meshes using NVIDIA Jetson AGX Orin, enabling local generative AI processing without cloud dependency.",
     tags: ["Edge AI", "NVIDIA Jetson", "3D Printing", "Generative AI"],
