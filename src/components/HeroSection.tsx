@@ -25,7 +25,7 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="flex-1 text-center md:text-left">
             <p className="animate-fade-up text-accent font-medium tracking-wide uppercase text-sm mb-3">
-              AI/ML Engineer & Researcher
+              AI/ML Specialist
             </p>
             <h1 className="animate-fade-up animation-delay-100 font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-heading leading-tight mb-6">
               Tiago R. de Almeida
