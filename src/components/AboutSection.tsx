@@ -29,7 +29,7 @@ const AboutSection = () => {
           </p>
           <p>
             After my PhD I worked as AI consultant helping companies to adopt AI/ML solutions in their products and services.
-            Currently, I am working as an AI/ML Applied Scientist for Adidas, where I am applying my expertise in 3D generative AI to 
+            Currently, I am working as an AI/ML Applied Scientist for <strong className="text-heading">Adidas</strong>, where I am applying my expertise in 3D generative AI to 
             create innovative solutions in the sportswear industry.
           </p>
           <p>
