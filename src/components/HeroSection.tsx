@@ -32,7 +32,7 @@ const HeroSection = () => {
             </h1>
             <p className="animate-fade-up animation-delay-200 text-lg md:text-xl text-text-body leading-relaxed mb-8 max-w-2xl">
               PhD in AI & Machine Learning, specializing in computer vision, trajectory prediction, and deep learning. 
-              Currently working as an independent AI Consultant, helping organizations leverage AI to solve real-world challenges.
+              Currently working as an AI/ML Applied Scientist for Adidas in 3D generative AI.
             </p>
 
             {/* Social Links */}

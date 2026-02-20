@@ -9,7 +9,7 @@ const AboutSection = () => {
 
         <div className="space-y-6 text-text-body text-lg leading-relaxed">
           <p>
-            I am an AI/ML engineer driven by a passion for machine learning, data science, 
+            I am an AI/ML Applied Scientist driven by a passion for machine learning, data science, 
             computer vision, and robotics. Learning new topics within these areas is what 
             drives me and deploying them in real-world applications is just a plus.
           </p>
@@ -28,7 +28,12 @@ const AboutSection = () => {
             estimation across the EU logistics network.
           </p>
           <p>
-            The journey is far from over. I'm still as curious and driven as ever, eager to 
+            After my PhD I worked as AI consultant helping companies to adopt AI/ML solutions in their products and services.
+            Currently, I am working as an AI/ML Applied Scientist for Adidas, where I am applying my expertise in 3D generative AI to 
+            create innovative solutions in the sportswear industry.
+          </p>
+          <p>
+            The journey is far from over. I am still as curious and driven as ever, eager to 
             continue learning and pushing the boundaries of what AI can achieve in the real world.
           </p>
         </div>

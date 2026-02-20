@@ -1,20 +1,29 @@
 import { Briefcase, GraduationCap, Building2 } from "lucide-react";
 
 const experiences = [
+    {
+    icon: Briefcase,
+    title: "AI/ML Applied Scientist",
+    company: "Adidas",
+    period: "Present",
+    description:
+      "Working as an AI/ML Applied Scientist for Adidas in 3D generative AI, creating innovative solutions in the sportswear industry.",
+    highlight: true,
+  },
   {
     icon: Briefcase,
     title: "AI Consultant",
     company: "Freelance",
-    period: "Present",
+    period: "2025-2026",
     description:
-      "Working as an independent AI consultant, helping organizations leverage machine learning and AI technologies to solve complex real-world challenges. Specializing in computer vision, deep learning, and scalable ML systems.",
+      "Worked as an independent AI consultant, helping organizations leverage machine learning and AI technologies to solve complex real-world challenges. Specializing in computer vision, deep learning, and scalable ML systems.",
     highlight: true,
   },
   {
     icon: GraduationCap,
     title: "PhD in AI & Machine Learning",
     company: "Human Motion Prediction",
-    period: "Completed",
+    period: "2020-2025",
     description:
       "Explored how deep learning models could predict movement patterns based on contextual information derived from agents and their trajectories. Published research at top venues including ICCV, IEEE RA-L, and ITSC.",
     highlight: true,
@@ -23,7 +32,7 @@ const experiences = [
     icon: Building2,
     title: "Applied Scientist Intern",
     company: "Amazon",
-    period: "6 months",
+    period: "2022-2023 (6 months)",
     description:
       "Developed and deployed a Transformer-based system for real-time transit time estimation across the EU logistics network. Strengthened ability to build scalable ML systems for production use.",
     highlight: false,
