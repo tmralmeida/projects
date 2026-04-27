@@ -14,7 +14,7 @@ const experiences = [
     icon: Briefcase,
     title: "AI Consultant",
     company: "Freelance",
-    period: "2025-2026",
+    period: "2025-Present",
     description:
       "Worked as an independent AI consultant, helping organizations leverage machine learning and AI technologies to solve complex real-world challenges. Specializing in computer vision, deep learning, and scalable ML systems.",
     highlight: true,
